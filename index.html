@@ -182,15 +182,27 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
 .cm-item span:last-child{font-size:11px;color:var(--text)}
 
 /* ── VENTURE PROPOSAL PAGE ── */
-.vp-hero{background:linear-gradient(135deg,rgba(0,212,180,.1),rgba(72,202,228,.05));border:1px solid rgba(0,212,180,.18);border-radius:18px;padding:18px 16px;margin-bottom:16px}
+.vp-hero{background:linear-gradient(135deg,rgba(0,212,180,.1),rgba(72,202,228,.05));border:1px solid rgba(0,212,180,.18);border-radius:18px;padding:96px 16px 16px;margin-bottom:16px;position:relative;overflow:hidden}
 .vp-hero-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.vp-emoji{font-size:36px}
+.vp-emoji{font-size:52px;position:absolute;top:14px;left:18px;z-index:2;line-height:1;filter:drop-shadow(0 3px 12px rgba(0,0,0,.7))}
+.vp-hero[data-label]::after{content:attr(data-label);position:absolute;top:26px;right:16px;z-index:2;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.09em;color:rgba(255,255,255,.65);text-shadow:0 1px 4px rgba(0,0,0,.6)}
 .vp-hero h2{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;line-height:1.2}
 .vp-hero p{font-size:12px;color:var(--muted);line-height:1.6}
 .vp-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
-.kpi{background:rgba(0,0,0,.2);border-radius:10px;padding:10px 8px;text-align:center}
+.kpi{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px 8px;text-align:center}
 .kpi-n{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--teal);line-height:1;margin-bottom:3px}
 .kpi-l{font-size:9px;color:var(--muted);line-height:1.3}
+.vh-hyd::before,.vh-sea::before,.vh-plt::before,.vh-cnt::before,.vh-swd::before,.vh-tour::before,.vh-sol::before{content:'';position:absolute;top:0;left:0;right:0;height:82px;border-radius:17px 17px 0 0;pointer-events:none}
+.vh-hyd::before{background:linear-gradient(135deg,#0c2a18 0%,#2d6a4f 60%,rgba(76,175,130,.35) 100%)}
+.vh-sea::before{background:linear-gradient(135deg,#021a3e 0%,#004a78 60%,rgba(72,202,228,.35) 100%)}
+.vh-plt::before{background:linear-gradient(135deg,#3a1800 0%,#7a3c00 60%,rgba(243,156,18,.35) 100%)}
+.vh-cnt::before{background:linear-gradient(135deg,#102800 0%,#2c5400 60%,rgba(139,195,74,.35) 100%)}
+.vh-swd::before{background:linear-gradient(135deg,#003030 0%,#005c5c 60%,rgba(0,212,180,.35) 100%)}
+.vh-tour::before{background:linear-gradient(135deg,#200038 0%,#480078 60%,rgba(155,89,182,.35) 100%)}
+.vh-sol::before{background:linear-gradient(135deg,#2a1200 0%,#663800 60%,rgba(245,201,122,.35) 100%)}
+.venture-proposals{display:none}
+.venture-proposals.open{display:block;animation:vpFade .35s ease}
+@keyframes vpFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
@@ -260,12 +272,11 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
 <!-- ═══════════════ VENTURES (FULL PROPOSALS) ═══════════════ -->
 <div id="ventures" class="page">
   <div class="pg-title">Full Venture Proposals</div>
-  <div class="pg-sub">Tap any venture to expand its complete investment brief — cover page through conclusion.</div>
-  <div class="note">📋 Each venture includes all 10 proposal sections. Tap a section header to expand it.</div>
-  <button class="exp-btn" id="expandAllBtn" onclick="toggleAllProps()"><span id="expandAllIcon">▼</span> Expand All Proposals</button>
+  <div class="pg-sub">Each venture card has its own button. Tap it to reveal the complete investment brief — cover page through conclusion.</div>
+  <div class="note">📋 Tap a venture's button to reveal its full 10-section investment proposal.</div>
 
   <!-- ── VENTURE 1: HYDROPONICS ── -->
-  <div class="vp-hero">
+  <div class="vp-hero vh-hyd" data-label="HYDROPONICS">
     <div class="vp-hero-top"><span class="vp-emoji">🌿</span><div><h2>Hydroponics</h2><p>Soil-free fresh produce for resorts & local markets</p></div></div>
     <p>Transfer and scale the existing hydroponic operation to Shoulder Island. Serve resort salad bars, hotel kitchens, and local supermarkets with premium fresh produce year-round.</p>
     <div class="vp-kpis">
@@ -316,7 +327,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
   </div>
 
   <!-- ── VENTURE 2: SEA CUCUMBER ── -->
-  <div class="vp-hero" style="margin-top:20px">
+  <div class="vp-hero vh-sea" style="margin-top:20px" data-label="SEA CUCUMBER">
     <div class="vp-hero-top"><span class="vp-emoji">🐟</span><div><h2>Sea Cucumber Farm</h2><p>Premium H. scabra aquaculture for Asian export markets</p></div></div>
     <p>Hatchery-based production of Holothuria scabra (sandfish) in Shoulder Island's lagoon. World's most commercially valuable sea cucumber species, prized as one of China's "Four Heavenly Foods."</p>
     <div class="vp-kpis">
@@ -366,7 +377,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
   </div>
 
   <!-- ── VENTURE 3: POULTRY ── -->
-  <div class="vp-hero" style="margin-top:20px">
+  <div class="vp-hero vh-plt" style="margin-top:20px" data-label="POULTRY">
     <div class="vp-hero-top"><span class="vp-emoji">🐔</span><div><h2>Poultry Farm</h2><p>Broiler meat + layer eggs for local & resort markets</p></div></div>
     <p>Commercial-scale chicken meat and egg production to replace Maldives' near-total reliance on poultry imports. Proven demand — Addu City's BTEK farm exceeded all forecasts from Day 1.</p>
     <div class="vp-kpis">
@@ -417,7 +428,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
   </div>
 
   <!-- ── VENTURE 4: COCONUT ── -->
-  <div class="vp-hero" style="margin-top:20px">
+  <div class="vp-hero vh-cnt" style="margin-top:20px" data-label="COCONUT · VCO">
     <div class="vp-hero-top"><span class="vp-emoji">🥥</span><div><h2>Coconut + VCO + Coir</h2><p>Near-zero raw material cost — palms already on island</p></div></div>
     <p>Harvest existing coconut palms for Virgin Coconut Oil (VCO) export, coir fibre, copra, and coconut water. Historically one of the Maldives' top traditional exports with almost zero capital cost for raw material.</p>
     <div class="vp-kpis">
@@ -451,7 +462,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
   </div>
 
   <!-- ── VENTURE 5: SEAWEED ── -->
-  <div class="vp-hero" style="margin-top:20px">
+  <div class="vp-hero vh-swd" style="margin-top:20px" data-label="SEAWEED · IMTA">
     <div class="vp-hero-top"><span class="vp-emoji">🌊</span><div><h2>Seaweed + IMTA</h2><p>Kappaphycus aquaculture + lagoon polyculture system</p></div></div>
     <p>Farm Kappaphycus alvarezii (red seaweed) on floating longlines in the lagoon. Combine with sea cucumbers and shrimp/lobster in an Integrated Multi-Trophic Aquaculture (IMTA) system for 200–400% more revenue per hectare.</p>
     <div class="vp-kpis">
@@ -489,7 +500,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
   </div>
 
   <!-- ── VENTURE 6: ECO TOURISM ── -->
-  <div class="vp-hero" style="margin-top:20px">
+  <div class="vp-hero vh-tour" style="margin-top:20px" data-label="ECO TOURISM">
     <div class="vp-hero-top"><span class="vp-emoji">🤿</span><div><h2>Eco Tourism Day Trips</h2><p>Resort partnership — no overnight infra required</p></div></div>
     <p>Partner with nearby resorts for premium "Farm Island Experience" day excursions. Guests snorkel the seaweed lagoon, tour the farm, and eat a fresh island lunch. USD 80–150 per head. Funds operations in early years while aquaculture scales.</p>
     <div class="vp-kpis">
@@ -525,7 +536,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
   </div>
 
   <!-- ── VENTURE 7: SOLAR + COMPOST ── -->
-  <div class="vp-hero" style="margin-top:20px">
+  <div class="vp-hero vh-sol" style="margin-top:20px" data-label="SOLAR · CIRCULAR">
     <div class="vp-hero-top"><span class="vp-emoji">☀️</span><div><h2>Solar + Compost + Carbon</h2><p>Zero-waste circular support system for the whole island</p></div></div>
     <p>Solar microgrid eliminates diesel costs. All organic waste streams composted and sold to resort gardens. Seaweed farm earns Verra carbon credits. This venture underpins all others — it's the island's infrastructure layer.</p>
     <div class="vp-kpis">
@@ -695,8 +706,32 @@ if(window.Telegram&&window.Telegram.WebApp){window.Telegram.WebApp.ready();windo
 function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');window.scrollTo(0,0)}
 function toggleDesc(card){const d=card.querySelector('.cdesc');d.classList.toggle('open')}
 function toggleProp(header){const body=header.nextElementSibling;const arrow=header.querySelector('.prop-arrow');const isOpen=body.classList.contains('open');body.classList.toggle('open');arrow.style.transform=isOpen?'':'rotate(180deg)'}
-function expandVenture(id){const wrap=document.getElementById(id);if(!wrap)return;wrap.querySelectorAll('.prop-body').forEach(b=>b.classList.add('open'));wrap.querySelectorAll('.prop-arrow').forEach(a=>{a.style.transform='rotate(180deg)'});wrap.scrollIntoView({behavior:'smooth',block:'start'})}
-function toggleAllProps(){const allBodies=document.querySelectorAll('#ventures .prop-body');const allArrows=document.querySelectorAll('#ventures .prop-arrow');const icon=document.getElementById('expandAllIcon');const btn=document.getElementById('expandAllBtn');const expanding=![...allBodies].some(b=>b.classList.contains('open'));allBodies.forEach(b=>{expanding?b.classList.add('open'):b.classList.remove('open')});allArrows.forEach(a=>{a.style.transform=expanding?'rotate(180deg)':''});icon.textContent=expanding?'▲':'▼';btn.childNodes[1].nodeValue=expanding?' Collapse All Proposals':' Expand All Proposals'}
+function expandVenture(id){
+  const wrap=document.getElementById(id);if(!wrap)return;
+  const isOpen=wrap.classList.contains('open');
+  wrap.classList.toggle('open');
+  if(!isOpen){
+    wrap.querySelectorAll('.prop-body').forEach(b=>b.classList.add('open'));
+    wrap.querySelectorAll('.prop-arrow').forEach(a=>{a.style.transform='rotate(180deg)'});
+    setTimeout(()=>wrap.scrollIntoView({behavior:'smooth',block:'start'}),50);
+  }else{
+    wrap.querySelectorAll('.prop-body').forEach(b=>b.classList.remove('open'));
+    wrap.querySelectorAll('.prop-arrow').forEach(a=>{a.style.transform=''});
+  }
+  let el=wrap.previousElementSibling;
+  while(el&&!el.classList.contains('vp-hero'))el=el.previousElementSibling;
+  const btn=el?el.querySelector('.vp-btn'):null;
+  if(btn)btn.innerHTML=isOpen?'📄 View Full Proposal ↓':'✕ Close Proposal ↑';
+}
+(function(){
+  const skip=new Set(['SCRIPT','STYLE']);
+  const walk=n=>{
+    if(skip.has(n.nodeName))return;
+    if(n.nodeType===3)n.nodeValue=n.nodeValue.replace(/\$(?=[\d\w])/g,'MRF ');
+    else n.childNodes.forEach(walk);
+  };
+  walk(document.body);
+})();
 let selCatVal='💡 New Idea';
 function selCat(btn,cat){document.querySelectorAll('.cbt').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');selCatVal=cat}
 let ideas=[];
