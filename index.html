@@ -151,6 +151,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
 .cbt.sel{background:rgba(0,212,180,.15);border-color:var(--teal);color:var(--teal)}
 .sbtn{width:100%;background:linear-gradient(135deg,var(--teal2),var(--teal));border:none;border-radius:12px;padding:13px;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--deep);cursor:pointer;transition:opacity .2s;letter-spacing:.04em}
 .sbtn:active{opacity:.8}
+.exp-btn{width:100%;background:rgba(0,212,180,.1);border:1.5px solid rgba(0,212,180,.28);border-radius:12px;padding:12px 16px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--teal);cursor:pointer;transition:all .2s;letter-spacing:.06em;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:8px}
+.exp-btn:active{background:rgba(0,212,180,.2)}
+.vp-btn{width:100%;background:rgba(0,212,180,.1);border:1.5px solid rgba(0,212,180,.22);border-radius:10px;padding:10px 14px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--teal);cursor:pointer;transition:all .2s;letter-spacing:.05em;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:6px}
+.vp-btn:active{background:rgba(0,212,180,.2)}
 .icard{background:var(--glass);border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:10px;animation:si .3s ease}
 @keyframes si{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .imeta{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
@@ -258,6 +262,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
   <div class="pg-title">Full Venture Proposals</div>
   <div class="pg-sub">Tap any venture to expand its complete investment brief — cover page through conclusion.</div>
   <div class="note">📋 Each venture includes all 10 proposal sections. Tap a section header to expand it.</div>
+  <button class="exp-btn" id="expandAllBtn" onclick="toggleAllProps()"><span id="expandAllIcon">▼</span> Expand All Proposals</button>
 
   <!-- ── VENTURE 1: HYDROPONICS ── -->
   <div class="vp-hero">
@@ -268,6 +273,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
       <div class="kpi"><div class="kpi-n">Month 1</div><div class="kpi-l">First<br>Revenue</div></div>
       <div class="kpi"><div class="kpi-n">50%+</div><div class="kpi-l">Price over<br>imports</div></div>
     </div>
+    <button class="vp-btn" onclick="expandVenture('v1')">📄 View Full Proposal ↓</button>
   </div>
   <div id="v1" class="venture-proposals">
     <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01</span> Cover Page</div><span class="prop-arrow">▼</span></div><div class="prop-body">
@@ -318,6 +324,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
       <div class="kpi"><div class="kpi-n">$140/kg</div><div class="kpi-l">Avg Export<br>Price (dried)</div></div>
       <div class="kpi"><div class="kpi-n">7.5 MT</div><div class="kpi-l">Annual<br>Target Yr 2</div></div>
     </div>
+    <button class="vp-btn" onclick="expandVenture('v2')">📄 View Full Proposal ↓</button>
   </div>
   <div class="note">🐠 Full detailed proposal for this venture has already been drafted separately. Key sections summarised below.</div>
   <div id="v2" class="venture-proposals">
@@ -367,6 +374,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
       <div class="kpi"><div class="kpi-n">10,000</div><div class="kpi-l">Broilers<br>Year 2</div></div>
       <div class="kpi"><div class="kpi-n">5,000</div><div class="kpi-l">Layer Hens<br>Year 2</div></div>
     </div>
+    <button class="vp-btn" onclick="expandVenture('v3')">📄 View Full Proposal ↓</button>
   </div>
   <div class="note">🐔 Full detailed proposal for this venture has already been drafted separately. Key sections summarised below.</div>
   <div id="v3" class="venture-proposals">
@@ -417,6 +425,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
       <div class="kpi"><div class="kpi-n">$5K/MT</div><div class="kpi-l">VCO<br>Export Price</div></div>
       <div class="kpi"><div class="kpi-n">~$0</div><div class="kpi-l">Raw Material<br>Cost</div></div>
     </div>
+    <button class="vp-btn" onclick="expandVenture('v4')">📄 View Full Proposal ↓</button>
   </div>
   <div id="v4" class="venture-proposals">
     <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01–02</span> Cover & Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body">
@@ -450,6 +459,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
       <div class="kpi"><div class="kpi-n">60 days</div><div class="kpi-l">Harvest<br>Cycle</div></div>
       <div class="kpi"><div class="kpi-n">$350/T</div><div class="kpi-l">Carrageenan<br>Market Price</div></div>
     </div>
+    <button class="vp-btn" onclick="expandVenture('v5')">📄 View Full Proposal ↓</button>
   </div>
   <div id="v5" class="venture-proposals">
     <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01–02</span> Cover & Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body">
@@ -487,6 +497,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
       <div class="kpi"><div class="kpi-n">$120</div><div class="kpi-l">Avg Revenue<br>Per Guest</div></div>
       <div class="kpi"><div class="kpi-n">20/day</div><div class="kpi-l">Target<br>Guest Volume</div></div>
     </div>
+    <button class="vp-btn" onclick="expandVenture('v6')">📄 View Full Proposal ↓</button>
   </div>
   <div id="v6" class="venture-proposals">
     <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01–02</span> Cover & Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body">
@@ -522,6 +533,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;line-
       <div class="kpi"><div class="kpi-n">$30K</div><div class="kpi-l">Annual Diesel<br>Costs Saved</div></div>
       <div class="kpi"><div class="kpi-n">$150/T</div><div class="kpi-l">Carbon Credit<br>Price (2030)</div></div>
     </div>
+    <button class="vp-btn" onclick="expandVenture('v7')">📄 View Full Proposal ↓</button>
   </div>
   <div id="v7" class="venture-proposals">
     <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01–03</span> Cover, Summary & Background</div><span class="prop-arrow">▼</span></div><div class="prop-body">
@@ -683,6 +695,8 @@ if(window.Telegram&&window.Telegram.WebApp){window.Telegram.WebApp.ready();windo
 function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');window.scrollTo(0,0)}
 function toggleDesc(card){const d=card.querySelector('.cdesc');d.classList.toggle('open')}
 function toggleProp(header){const body=header.nextElementSibling;const arrow=header.querySelector('.prop-arrow');const isOpen=body.classList.contains('open');body.classList.toggle('open');arrow.style.transform=isOpen?'':'rotate(180deg)'}
+function expandVenture(id){const wrap=document.getElementById(id);if(!wrap)return;wrap.querySelectorAll('.prop-body').forEach(b=>b.classList.add('open'));wrap.querySelectorAll('.prop-arrow').forEach(a=>{a.style.transform='rotate(180deg)'});wrap.scrollIntoView({behavior:'smooth',block:'start'})}
+function toggleAllProps(){const allBodies=document.querySelectorAll('#ventures .prop-body');const allArrows=document.querySelectorAll('#ventures .prop-arrow');const icon=document.getElementById('expandAllIcon');const btn=document.getElementById('expandAllBtn');const expanding=![...allBodies].some(b=>b.classList.contains('open'));allBodies.forEach(b=>{expanding?b.classList.add('open'):b.classList.remove('open')});allArrows.forEach(a=>{a.style.transform=expanding?'rotate(180deg)':''});icon.textContent=expanding?'▲':'▼';btn.childNodes[1].nodeValue=expanding?' Collapse All Proposals':' Expand All Proposals'}
 let selCatVal='💡 New Idea';
 function selCat(btn,cat){document.querySelectorAll('.cbt').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');selCatVal=cat}
 let ideas=[];
