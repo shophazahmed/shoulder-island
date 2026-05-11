@@ -1,0 +1,498 @@
+<!-- ═══ VENTURE 5: SEAWEED & IMTA ═══ -->
+<div id="v5" class="page">
+  <button class="back-btn" onclick="goToPage('home')">← Home</button>
+  <div class="proj-hero">
+    <img class="proj-hero-img" data-img-key="v5" src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800" alt="Seaweed" onload="this.classList.add('loaded')">
+    <div class="proj-hero-overlay"></div>
+    <label class="img-edit-ui"><span style="display:block;font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">📷 Image URL (Google Drive share link or direct)</span><input class="img-url-input" placeholder="Paste link and press Enter…" onchange="updateImg('v5',this.value)"></label>
+  </div>
+  <div class="proj-hd">
+    <div class="proj-icon">🌊</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 05</div>
+      <div class="proj-name">Seaweed &amp; IMTA</div>
+      <div class="proj-sub">Seaweed farming, Integrated Multi-Trophic Aquaculture &amp; carbon credits</div>
+    </div>
+  </div>
+  <div class="proj-kpis">
+    <div class="pkpi"><div class="pkpi-n" data-key="v5-kpi1" onclick="makeEditable(this)">MVR 1.85M+</div><div class="pkpi-l">Year 3 Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n" data-key="v5-kpi2" onclick="makeEditable(this)">MVR 5,390/T</div><div class="pkpi-l">Dry Seaweed Price</div></div>
+    <div class="pkpi"><div class="pkpi-n">Verra VCS</div><div class="pkpi-l">Carbon Registry</div></div>
+  </div>
+  <p class="proj-desc">Cultivate seaweed on longlines and integrate fish and shellfish in an IMTA system to maximise nutrient cycling. Sell dried seaweed to export markets, capture carbon credits via Verra, and generate additional revenue through IMTA fish sales. The system feeds into the island's composting and circular economy loop.</p>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01</span> Cover Page</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v5-prop-01">
+    <div class="cover-card"><span class="island-emoji">🌊</span><h2>Seaweed &amp; IMTA</h2><p>Shoulder Island — Integrated Venture Plan</p><hr class="cover-divider"><div class="cover-meta"><div class="cm-item"><span>Project</span><span>Seaweed Cultivation + Integrated Multi-Trophic Aquaculture</span></div><div class="cm-item"><span>Location</span><span>Shoulder Island Lagoon, Maldives</span></div><div class="cm-item"><span>System</span><span>Longline seaweed + fish cages + shellfish + carbon credits</span></div><div class="cm-item"><span>Year 1 Revenue</span><span>MVR 308,000</span></div><div class="cm-item"><span>Year 3 Revenue</span><span>MVR 1,848,000+</span></div></div></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">02</span> Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v5-prop-02">
+    <div class="prop-section"><p>Seaweed farming is one of the most capital-efficient and environmentally restorative forms of aquaculture. Shoulder Island's lagoon provides ideal warm, nutrient-rich conditions for cultivating Eucheuma and Sargassum species used in food, cosmetics, and fertiliser industries. By integrating fish cages and shellfish (IMTA), the system achieves nutrient cycling that reduces waste, boosts fish yields, and qualifies for blue carbon credits under the Verra Verified Carbon Standard.</p><p style="margin-top:8px">Revenue streams include dry seaweed export (MVR 5,390/tonne), IMTA fish sales to resorts, and carbon credit sales. The operation requires minimal infrastructure and scales with the natural lagoon ecosystem.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">03</span> System Design &amp; Operations</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v5-prop-03">
+    <div class="prop-section"><h4>Seaweed Longlines</h4><ul><li>Species: Eucheuma cottonii (kappaphycus) for carrageenan export, Sargassum for fertiliser</li><li>Longline grid: 500m initial + 2km Year 3 expansion in lagoon shallows</li><li>45-day harvest cycles, 6–8 harvests per year</li><li>Dry yield ratio: 8:1 (wet:dry), selling at MVR 5,390/tonne dry weight</li></ul></div>
+    <div class="prop-section"><h4>IMTA Cages</h4><ul><li>Fish species: Grouper, Snapper, Pompano — high resort demand, premium prices</li><li>Shellfish: Pearl oysters and sea cucumbers in lower cage layers</li><li>Fish waste feeds seaweed below; seaweed oxygenates fish water — closed nutrient loop</li><li>Integration with hydroponics: nutrient-rich water from fish tanks irrigates grow beds</li></ul></div>
+    <div class="prop-section"><h4>Carbon Credits (Verra VCS)</h4><ul><li>Seaweed absorbs CO₂ during growth — qualifies for blue carbon methodology</li><li>Verra VM0033 or VM0047 methodology for macroalgae cultivation</li><li>Register credit batches annually; sell to carbon offset buyers at USD 20–50/tonne CO₂</li><li>Year 1 estimated: 5 tonnes CO₂ — modest, but growing with scale</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">04</span> Financial Projections</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v5-prop-04">
+    <table class="ptable"><tr><th>Capex Item</th><th>MVR</th></tr><tr><td>Longlines &amp; buoys (500m)</td><td>77,000</td></tr><tr><td>Seaweed seed stock</td><td>46,200</td></tr><tr><td>Drying racks &amp; shading</td><td>30,800</td></tr><tr><td>IMTA fish cages (×4)</td><td>92,400</td></tr><tr><td>Labour (2 staff, Yr 1)</td><td>110,880</td></tr><tr><td>Verra registration &amp; audit</td><td>61,600</td></tr><tr><td>TOTAL</td><td>418,880</td></tr></table>
+    <table class="ptable" style="margin-top:10px"><tr><th>Revenue Stream</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th></tr><tr><td>Seaweed (dry export)</td><td class="g">MVR 231K</td><td class="g">MVR 693K</td><td class="g">MVR 1.39M</td></tr><tr><td>IMTA fish sales</td><td class="g">—</td><td class="g">MVR 154K</td><td class="g">MVR 308K</td></tr><tr><td>Carbon credits</td><td class="g">MVR 77K</td><td class="g">MVR 77K</td><td class="g">MVR 154K</td></tr><tr><td>TOTAL</td><td class="g">MVR 308K</td><td class="g">MVR 924K</td><td class="g">MVR 1.85M</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">05</span> Environmental &amp; Regulatory</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v5-prop-05">
+    <div class="prop-section"><ul><li>Net-positive marine biodiversity: seaweed beds provide habitat for juvenile fish</li><li>No freshwater input required — 100% marine system</li><li>Zero chemical inputs — fully organic and reef-safe</li><li>EPA (Maldives) — EIA for lagoon aquaculture structures</li><li>Ministry of Fisheries — aquaculture licence and species permit</li><li>Verra VCS — third-party audit required every 5 years for carbon credits</li><li>CITES check for any export of marine organisms</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <button class="add-sec-btn" onclick="addSection('v5')">+ Add New Section</button>
+</div>
+
+<!-- ═══ VENTURE 6: ECO TOURISM ═══ -->
+<div id="v6" class="page">
+  <button class="back-btn" onclick="goToPage('home')">← Home</button>
+  <div class="proj-hero">
+    <img class="proj-hero-img" data-img-key="v6" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800" alt="Eco Tourism" onload="this.classList.add('loaded')">
+    <div class="proj-hero-overlay"></div>
+    <label class="img-edit-ui"><span style="display:block;font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">📷 Image URL (Google Drive share link or direct)</span><input class="img-url-input" placeholder="Paste link and press Enter…" onchange="updateImg('v6',this.value)"></label>
+  </div>
+  <div class="proj-hd">
+    <div class="proj-icon">🤿</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 06</div>
+      <div class="proj-name">Eco Tourism</div>
+      <div class="proj-sub">Day-trips, coral restoration dives &amp; premium nature experiences</div>
+    </div>
+  </div>
+  <div class="proj-kpis">
+    <div class="pkpi"><div class="pkpi-n" data-key="v6-kpi1" onclick="makeEditable(this)">MVR 7.39M</div><div class="pkpi-l">Year 3 Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n" data-key="v6-kpi2" onclick="makeEditable(this)">MVR 1,848</div><div class="pkpi-l">Per Guest (Day Trip)</div></div>
+    <div class="pkpi"><div class="pkpi-n">Coral + Farm</div><div class="pkpi-l">Unique Experience</div></div>
+  </div>
+  <p class="proj-desc">Transform Shoulder Island into a premium eco-tourism destination offering guided snorkel and dive experiences, coral restoration participation, farm tours, and curated day-trip packages for resort guests and island-hopping travellers. Partner with nearby resorts for B2B referrals and package bundling.</p>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01</span> Cover Page</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v6-prop-01">
+    <div class="cover-card"><span class="island-emoji">🤿</span><h2>Eco Tourism</h2><p>Shoulder Island — Integrated Venture Plan</p><hr class="cover-divider"><div class="cover-meta"><div class="cm-item"><span>Project</span><span>Premium Eco Day-Trip &amp; Resort Partnership Programme</span></div><div class="cm-item"><span>Location</span><span>Shoulder Island &amp; surrounding lagoon, Maldives</span></div><div class="cm-item"><span>Experiences</span><span>Snorkel, coral dive, farm tour, sunset, kayak</span></div><div class="cm-item"><span>Year 1 Revenue</span><span>MVR 770,000</span></div><div class="cm-item"><span>Year 3 Revenue</span><span>MVR 7,390,000+</span></div></div></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">02</span> Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v6-prop-02">
+    <div class="prop-section"><p>Shoulder Island's pristine reef, lagoon, and integrated farm ecosystem create a unique eco-tourism offering unavailable at traditional resorts. Guests participate in coral nursery cultivation, harvest fresh produce on the hydroponics farm, and snorkel with guides over restored reef sections — an authentic, educational, and premium nature experience priced at MVR 1,848 per day-trip guest.</p><p style="margin-top:8px">Revenue streams include direct bookings, B2B resort referrals (resorts upsell our experiences to their guests), and a curated artisan/nature shop. Year 3 revenue target of MVR 7.39M assumes 10–15 resort partnership agreements and a growing direct-booking channel.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">03</span> Experience Portfolio</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v6-prop-03">
+    <div class="prop-section"><h4>Signature Day Trip (MVR 1,848/person)</h4><ul><li>Speed boat transfer from resort/island</li><li>Guided reef snorkel with coral nursery explanation</li><li>Farm tour: hydroponics, seaweed longlines, beehives</li><li>Freshly harvested farm lunch</li><li>Free time: kayak, paddleboard, hammock</li><li>Return transfer with souvenir produce pack</li></ul></div>
+    <div class="prop-section"><h4>Coral Restoration Dive (Premium — MVR 2,310/person)</h4><ul><li>PADI-guided dive to coral nursery frames</li><li>Guests plant coral fragments under expert supervision</li><li>Digital certificate + coral tracking via QR code</li><li>Attracts divers, honeymooners, and conservation-focused guests</li></ul></div>
+    <div class="prop-section"><h4>Sunset &amp; Private Events</h4><ul><li>Private sunset sundowner on the island — weddings, proposals, corporate retreats</li><li>Minimum 10 pax; premium pricing MVR 3,080–6,160/event</li></ul></div>
+    <div class="prop-section"><h4>B2B Resort Partnerships</h4><ul><li>Resorts bundle our experience into their guest excursion menu</li><li>30% commission to resort on each booking</li><li>White-label option: resort branding on the experience</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">04</span> Financial Projections</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v6-prop-04">
+    <table class="ptable"><tr><th>Capex Item</th><th>MVR</th></tr><tr><td>Jetty &amp; guest landing pontoon</td><td>308,000</td></tr><tr><td>Coral nursery frames (×50)</td><td>30,800</td></tr><tr><td>Snorkel &amp; dive equipment (20 sets)</td><td>46,200</td></tr><tr><td>Tourist boat (10-pax speedboat)</td><td>385,000</td></tr><tr><td>Guides &amp; hospitality staff (Yr 1)</td><td>295,680</td></tr><tr><td>Marketing &amp; resort outreach</td><td>46,200</td></tr><tr><td>TOTAL</td><td>1,111,880</td></tr></table>
+    <table class="ptable" style="margin-top:10px"><tr><th>Revenue Stream</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th></tr><tr><td>Conservative (direct bookings)</td><td class="g">MVR 770K</td><td class="g">MVR 1.85M</td><td class="g">MVR 2.77M</td></tr><tr><td>Target (with resort B2B)</td><td class="g">—</td><td class="g">MVR 3.08M</td><td class="g">MVR 7.39M</td></tr><tr><td>B2B resort referrals</td><td class="g">MVR 308K</td><td class="g">MVR 924K</td><td class="g">MVR 1.85M</td></tr><tr><td>Island shop &amp; produce</td><td class="g">MVR 77K</td><td class="g">MVR 231K</td><td class="g">MVR 462K</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">05</span> Regulatory &amp; Licensing</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v6-prop-05">
+    <div class="prop-section"><ul><li>Ministry of Tourism — Picnic Island / Day Trip operator licence</li><li>Maldives Police Service — vessel registration and safety certification</li><li>PADI or SSI dive instructor certification for coral dive guides</li><li>EPA — permit for coral fragment collection and nursery programme</li><li>Ministry of Economic Development — business and tour operator registration</li><li>Island Council — approval for jetty construction and guest landing</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <button class="add-sec-btn" onclick="addSection('v6')">+ Add New Section</button>
+</div>
+
+<!-- ═══ VENTURE 7: SOLAR & CIRCULAR ═══ -->
+<div id="v7" class="page">
+  <button class="back-btn" onclick="goToPage('home')">← Home</button>
+  <div class="proj-hero">
+    <img class="proj-hero-img" data-img-key="v7" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800" alt="Solar &amp; Circular" onload="this.classList.add('loaded')">
+    <div class="proj-hero-overlay"></div>
+    <label class="img-edit-ui"><span style="display:block;font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">📷 Image URL (Google Drive share link or direct)</span><input class="img-url-input" placeholder="Paste link and press Enter…" onchange="updateImg('v7',this.value)"></label>
+  </div>
+  <div class="proj-hd">
+    <div class="proj-icon">☀️</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 07</div>
+      <div class="proj-name">Solar &amp; Circular Economy</div>
+      <div class="proj-sub">Off-grid solar, biochar, BSF composting &amp; carbon credits</div>
+    </div>
+  </div>
+  <div class="proj-kpis">
+    <div class="pkpi"><div class="pkpi-n" data-key="v7-kpi1" onclick="makeEditable(this)">MVR 1.23M+</div><div class="pkpi-l">Year 3 Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n" data-key="v7-kpi2" onclick="makeEditable(this)">MVR 462K</div><div class="pkpi-l">Diesel Savings Yr 3</div></div>
+    <div class="pkpi"><div class="pkpi-n" data-key="v7-kpi3" onclick="makeEditable(this)">MVR 2,310/T</div><div class="pkpi-l">Biochar Price</div></div>
+  </div>
+  <p class="proj-desc">Power the island entirely from solar with battery storage, eliminating diesel dependency and generating verified carbon credits. Organic waste becomes biochar (sold to farms) and compost (sold to local agriculture). Black Soldier Fly larvae convert food waste into high-protein animal feed. Each island waste stream becomes a revenue stream.</p>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01</span> Cover Page</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v7-prop-01">
+    <div class="cover-card"><span class="island-emoji">☀️</span><h2>Solar &amp; Circular Economy</h2><p>Shoulder Island — Integrated Venture Plan</p><hr class="cover-divider"><div class="cover-meta"><div class="cm-item"><span>Project</span><span>Off-Grid Solar + Biochar + BSF Composting + Carbon Credits</span></div><div class="cm-item"><span>Location</span><span>Shoulder Island, Maldives</span></div><div class="cm-item"><span>System</span><span>Closed-loop: waste in → energy + soil + feed + credits out</span></div><div class="cm-item"><span>Year 1 Revenue</span><span>MVR 308,000</span></div><div class="cm-item"><span>Year 3 Revenue</span><span>MVR 1,232,000+</span></div></div></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">02</span> Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v7-prop-02">
+    <div class="prop-section"><p>Shoulder Island runs on diesel generators — expensive, polluting, and logistically vulnerable. This venture installs a 30kW solar array with 100kWh battery bank to achieve full energy independence, reducing operating costs by MVR 231–539K/year and qualifying for Gold Standard carbon credits on diesel displacement.</p><p style="margin-top:8px">Simultaneously, the island's organic waste streams — coconut husks, crop residues, food scraps, poultry manure — are converted into high-value biochar via pyrolysis kilns (sold at MVR 2,310/tonne to regional farms), premium compost (sold locally), and Black Soldier Fly larvae (BSFL) dried protein meal for poultry and fish feed. Every waste input has an output with a price tag.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">03</span> System Components</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v7-prop-03">
+    <div class="prop-section"><h4>Solar + Storage</h4><ul><li>30kW monocrystalline array — rooftop and ground-mount</li><li>100kWh LFP battery bank — 48h+ autonomy without sun</li><li>Bidirectional inverter for potential grid export</li><li>Eliminates diesel generator fuel cost entirely</li></ul></div>
+    <div class="prop-section"><h4>Biochar Kiln</h4><ul><li>Continuous-feed pyrolysis unit processing 200kg/day of crop waste</li><li>Biochar output: ~50kg/day dry weight</li><li>Biochar applied to hydroponic grow beds; surplus sold at MVR 2,310/tonne</li><li>Syngas from pyrolysis used for cooking — displaces LPG</li></ul></div>
+    <div class="prop-section"><h4>BSF (Black Soldier Fly) Composting</h4><ul><li>BSF larvae consume food scraps and poultry manure in 14-day cycles</li><li>Larvae harvested, dried → 40% protein meal for poultry + fish feed</li><li>Residual frass → premium compost sold to regional agriculture</li><li>System capacity: 50kg waste/day → 10kg protein meal + 15kg compost/day</li></ul></div>
+    <div class="prop-section"><h4>Carbon Credits</h4><ul><li>Gold Standard methodology for diesel displacement (solar)</li><li>Verra VCS for biochar carbon sequestration</li><li>Estimated 150–300 tCO₂e/year across both projects</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">04</span> Financial Projections</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v7-prop-04">
+    <table class="ptable"><tr><th>Capex Item</th><th>MVR</th></tr><tr><td>Solar panels + mounting (30kW)</td><td>693,000</td></tr><tr><td>Battery bank (100kWh LFP)</td><td>462,000</td></tr><tr><td>Composting infrastructure</td><td>77,000</td></tr><tr><td>BSF colony setup &amp; shed</td><td>46,200</td></tr><tr><td>Pyrolysis kiln</td><td>30,800</td></tr><tr><td>Gold Standard + Verra registration</td><td>61,600</td></tr><tr><td>TOTAL</td><td>1,370,600</td></tr></table>
+    <table class="ptable" style="margin-top:10px"><tr><th>Revenue / Saving</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th></tr><tr><td>Diesel savings (solar)</td><td class="g">MVR 231K</td><td class="g">MVR 385K</td><td class="g">MVR 539K</td></tr><tr><td>Compost sales</td><td class="g">MVR 77K</td><td class="g">MVR 185K</td><td class="g">MVR 385K</td></tr><tr><td>BSF protein meal</td><td class="g">—</td><td class="g">MVR 123K</td><td class="g">MVR 231K</td></tr><tr><td>Carbon credits</td><td class="g">—</td><td class="g">MVR 30.8K</td><td class="g">MVR 77K</td></tr><tr><td>TOTAL</td><td class="g">MVR 308K</td><td class="g">MVR 724K</td><td class="g">MVR 1.23M</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">05</span> Circular Economy Map</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v7-prop-05">
+    <div class="prop-section"><p style="font-family:'Inter',sans-serif;font-size:12px;color:var(--text2);line-height:1.9">
+      ☀️ <strong>Solar</strong> → powers island (100%) → saves MVR 385K/yr diesel → carbon credits<br>
+      🌿 <strong>Hydroponics</strong> crop waste → 🔥 <strong>Biochar kiln</strong> → biochar → grow beds / sold<br>
+      🐔 <strong>Poultry</strong> manure + food scraps → 🪲 <strong>BSF</strong> → protein meal (→ poultry feed) + frass (→ compost)<br>
+      🌊 <strong>Fish IMTA</strong> wastewater → 🌿 <strong>Hydroponics</strong> irrigation → zero nutrient discharge<br>
+      🌱 <strong>Compost</strong> → sold to local farms / island councils → income + goodwill<br>
+      💨 <strong>Biochar syngas</strong> → cooking fuel → displaces LPG
+    </p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">06</span> Regulatory Framework</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v7-prop-06">
+    <div class="prop-section"><ul><li>Maldives Energy Authority (MEA) — solar installation permit and grid connection</li><li>EPA — waste management and composting licence</li><li>Ministry of Agriculture — BSF protein meal registration as animal feed</li><li>Gold Standard Foundation — project registration and annual monitoring</li><li>Verra VCS — biochar methodology audit (every 5 years)</li><li>Ministry of Economic Development — general business registration</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <button class="add-sec-btn" onclick="addSection('v7')">+ Add New Section</button>
+</div>
+
+<!-- ═══ IDEAS PAGE ═══ -->
+<div id="ideas" class="page">
+  <div class="proj-hd" style="margin-bottom:20px">
+    <div class="proj-icon">💬</div>
+    <div class="proj-info">
+      <div class="proj-label">Team Board</div>
+      <div class="proj-name">Ideas &amp; Proposals</div>
+      <div class="proj-sub">Submit ideas, vote, and discuss venture opportunities</div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+    <button class="cat-btn active" onclick="selCat(this,'all')">All</button>
+    <button class="cat-btn" onclick="selCat(this,'venture')">💡 Venture</button>
+    <button class="cat-btn" onclick="selCat(this,'ops')">⚙️ Operations</button>
+    <button class="cat-btn" onclick="selCat(this,'market')">📈 Market</button>
+    <button class="cat-btn" onclick="selCat(this,'community')">🤝 Community</button>
+  </div>
+
+  <div id="ideaForm" style="background:var(--sur);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:16px">
+    <div style="font-size:11px;color:var(--muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:.08em">Submit an Idea</div>
+    <input id="ideaTitle" placeholder="Idea title…" style="width:100%;background:var(--sur2);border:1px solid var(--border);border-radius:var(--rsm);padding:9px 12px;color:var(--text);font-size:13px;outline:none;font-family:'Inter',sans-serif;box-sizing:border-box;margin-bottom:8px">
+    <textarea id="ideaBody" placeholder="Describe the idea, opportunity, or suggestion…" rows="3" style="width:100%;background:var(--sur2);border:1px solid var(--border);border-radius:var(--rsm);padding:9px 12px;color:var(--text);font-size:12px;outline:none;font-family:'Inter',sans-serif;resize:vertical;box-sizing:border-box;margin-bottom:8px"></textarea>
+    <div style="display:flex;gap:8px;align-items:center">
+      <select id="ideaCat" style="background:var(--sur2);border:1px solid var(--border);border-radius:var(--rsm);padding:7px 10px;color:var(--text2);font-size:12px;outline:none;font-family:'Inter',sans-serif">
+        <option value="venture">💡 Venture</option>
+        <option value="ops">⚙️ Operations</option>
+        <option value="market">📈 Market</option>
+        <option value="community">🤝 Community</option>
+      </select>
+      <input id="ideaAuthor" placeholder="Your name…" style="flex:1;background:var(--sur2);border:1px solid var(--border);border-radius:var(--rsm);padding:7px 12px;color:var(--text);font-size:12px;outline:none;font-family:'Inter',sans-serif">
+      <button onclick="submitIdea()" style="background:var(--gdim);border:1px solid var(--gb);border-radius:var(--rsm);padding:8px 16px;color:var(--gold);font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap">Submit →</button>
+    </div>
+  </div>
+
+  <div id="ideasList"></div>
+</div>
+
+<script>
+// ─── DEFAULT DATA (fallback if data.json unavailable) ────────────────────────
+const DEFAULT_DATA = {
+  rate: 15.4,
+  images: {
+    v1:"https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800",
+    v2:"https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
+    v3:"https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800",
+    v4:"https://images.unsplash.com/photo-1580984969071-a8da5656c2fb?w=800",
+    v5:"https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800",
+    v6:"https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800",
+    v7:"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800"
+  },
+  values: {
+    "stat-yr2":"MVR 32.3M","stat-yr3":"MVR 154M+",
+    "row-v1":"MVR 1.85M","row-v2":"MVR 129.4M","row-v3":"MVR 16.3M",
+    "row-v4":"MVR 1.23M","row-v5":"MVR 1.85M","row-v6":"MVR 7.39M","row-v7":"MVR 1.23M",
+    "rev-hyd-yr1":"MVR 616K","rev-hyd-yr2":"MVR 1.23M","rev-hyd-yr3":"MVR 1.85M",
+    "rev-plt-yr1":"MVR 3.11M","rev-plt-yr2":"MVR 9.67M","rev-plt-yr3":"MVR 16.3M",
+    "rev-cnt-yr1":"MVR 231K","rev-cnt-yr2":"MVR 616K","rev-cnt-yr3":"MVR 1.23M",
+    "rev-swd-yr1":"MVR 308K","rev-swd-yr2":"MVR 924K","rev-swd-yr3":"MVR 1.85M",
+    "rev-tour-yr1":"MVR 770K","rev-tour-yr2":"MVR 3.08M","rev-tour-yr3":"MVR 7.39M",
+    "rev-sea-yr1":"MVR 7.55M","rev-sea-yr2":"MVR 16.2M","rev-sea-yr3":"MVR 129.4M",
+    "rev-sol-yr1":"MVR 308K","rev-sol-yr2":"MVR 724K","rev-sol-yr3":"MVR 1.23M",
+    "rev-total-yr1":"MVR 12.9M","rev-total-yr2":"MVR 32.3M","rev-total-yr3":"MVR 158.6M+",
+    "cap-hyd":"MVR ~785K","cap-plt":"MVR ~2.97M","cap-sea":"MVR ~3.22M",
+    "cap-cnt":"MVR ~370K","cap-swd":"MVR ~416K","cap-tour":"MVR ~1.11M",
+    "cap-sol":"MVR ~1.37M","cap-total":"MVR ~10.2M",
+    "v1-kpi1":"MVR 1.85M",
+    "v2-kpi1":"MVR 129.4M","v2-kpi2":"MVR 2,156/kg",
+    "v3-kpi1":"MVR 16.3M",
+    "v4-kpi1":"MVR 1.23M+","v4-kpi2":"MVR 77K/MT",
+    "v5-kpi1":"MVR 1.85M+","v5-kpi2":"MVR 5,390/T",
+    "v6-kpi1":"MVR 7.39M","v6-kpi2":"MVR 1,848",
+    "v7-kpi1":"MVR 1.23M+","v7-kpi2":"MVR 462K","v7-kpi3":"MVR 2,310/T"
+  }
+};
+
+let SITE_DATA = JSON.parse(JSON.stringify(DEFAULT_DATA));
+let currentCat = 'all';
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+async function initData() {
+  try {
+    const r = await fetch('./data.json');
+    if (r.ok) {
+      const d = await r.json();
+      if (d.values) SITE_DATA.values = Object.assign({}, DEFAULT_DATA.values, d.values);
+      if (d.images) SITE_DATA.images = Object.assign({}, DEFAULT_DATA.images, d.images);
+    }
+  } catch(e) { /* use DEFAULT_DATA */ }
+  applyImages(SITE_DATA.images);
+  applyData();
+  applyStoredOverrides();
+  renderIdeas();
+}
+
+// ─── APPLY IMAGES ─────────────────────────────────────────────────────────────
+function applyImages(images) {
+  Object.keys(images).forEach(k => {
+    const stored = localStorage.getItem('shoulder_img_' + k);
+    const url = stored || images[k];
+    document.querySelectorAll('[data-img-key="' + k + '"]').forEach(el => {
+      el.src = url;
+    });
+  });
+}
+
+// ─── APPLY DATA ──────────────────────────────────────────────────────────────
+function applyData() {
+  Object.keys(SITE_DATA.values).forEach(k => {
+    document.querySelectorAll('[data-key="' + k + '"]').forEach(el => {
+      if (!el.querySelector('input')) el.textContent = SITE_DATA.values[k];
+    });
+  });
+}
+
+// ─── APPLY STORED OVERRIDES ───────────────────────────────────────────────────
+function applyStoredOverrides() {
+  // Values
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (k.startsWith('shoulder_val_')) {
+      const key = k.replace('shoulder_val_', '');
+      const val = localStorage.getItem(k);
+      document.querySelectorAll('[data-key="' + key + '"]').forEach(el => {
+        if (!el.querySelector('input')) el.textContent = val;
+      });
+      SITE_DATA.values[key] = val;
+    }
+    if (k.startsWith('shoulder_img_')) {
+      const key = k.replace('shoulder_img_', '');
+      const url = localStorage.getItem(k);
+      document.querySelectorAll('[data-img-key="' + key + '"]').forEach(el => { el.src = url; });
+    }
+    if (k.startsWith('shoulder_prop_')) {
+      const key = k.replace('shoulder_prop_', '');
+      const el = document.querySelector('[data-prop-key="' + key + '"]');
+      if (el) el.innerHTML = localStorage.getItem(k);
+    }
+  }
+}
+
+// ─── EDIT MODE ───────────────────────────────────────────────────────────────
+function toggleEdit() {
+  const body = document.body;
+  const btn = document.getElementById('editBtn');
+  const toolbar = document.getElementById('editToolbar');
+  body.classList.toggle('edit-mode');
+  const on = body.classList.contains('edit-mode');
+  btn.classList.toggle('active', on);
+  btn.textContent = on ? '✏️ Editing' : '✏️ Edit Mode';
+  toolbar.style.display = on ? 'flex' : 'none';
+  document.querySelectorAll('.prop-body').forEach(el => {
+    el.contentEditable = on ? 'true' : 'false';
+  });
+}
+
+// ─── MAKE EDITABLE (inline input for data-key spans) ─────────────────────────
+function makeEditable(el) {
+  if (!document.body.classList.contains('edit-mode')) return;
+  if (el.querySelector('input')) return;
+  const original = el.textContent;
+  const inp = document.createElement('input');
+  inp.className = 'edit-input';
+  inp.value = original;
+  inp.style.width = Math.max(80, original.length * 9) + 'px';
+  el.textContent = '';
+  el.appendChild(inp);
+  inp.focus();
+  inp.select();
+  const commit = () => {
+    const val = inp.value.trim() || original;
+    el.textContent = val;
+    const key = el.dataset.key;
+    if (key) {
+      localStorage.setItem('shoulder_val_' + key, val);
+      SITE_DATA.values[key] = val;
+      document.querySelectorAll('[data-key="' + key + '"]').forEach(other => {
+        if (other !== el && !other.querySelector('input')) other.textContent = val;
+      });
+    }
+  };
+  inp.addEventListener('blur', commit);
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); inp.blur(); } if (e.key === 'Escape') { el.textContent = original; } });
+}
+
+// ─── UPDATE IMAGE ─────────────────────────────────────────────────────────────
+function updateImg(key, rawUrl) {
+  if (!rawUrl.trim()) return;
+  let url = rawUrl.trim();
+  const driveMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)\//);
+  if (driveMatch) url = 'https://drive.google.com/uc?export=view&id=' + driveMatch[1];
+  document.querySelectorAll('[data-img-key="' + key + '"]').forEach(el => {
+    el.classList.remove('loaded');
+    el.src = url;
+    el.onload = () => el.classList.add('loaded');
+  });
+  localStorage.setItem('shoulder_img_' + key, url);
+  SITE_DATA.images[key] = url;
+}
+
+// ─── SAVE ALL ─────────────────────────────────────────────────────────────────
+function saveAll() {
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.dataset.key;
+    const val = el.querySelector('input') ? el.querySelector('input').value : el.textContent;
+    if (key && val) { localStorage.setItem('shoulder_val_' + key, val); SITE_DATA.values[key] = val; }
+  });
+  document.querySelectorAll('[data-prop-key]').forEach(el => {
+    localStorage.setItem('shoulder_prop_' + el.dataset.propKey, el.innerHTML);
+  });
+  const btn = document.getElementById('saveBtn');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Saved!';
+  setTimeout(() => { btn.textContent = orig; }, 2000);
+}
+
+// ─── EXPORT data.json ─────────────────────────────────────────────────────────
+function exportJSON() {
+  const out = { _note: 'All monetary values in MVR (1 USD = 15.4 MVR). Edit values here or via Edit Mode in the browser.', rate: 15.4, images: {}, values: {} };
+  Object.keys(SITE_DATA.images).forEach(k => {
+    out.images[k] = localStorage.getItem('shoulder_img_' + k) || SITE_DATA.images[k];
+  });
+  Object.keys(SITE_DATA.values).forEach(k => {
+    out.values[k] = localStorage.getItem('shoulder_val_' + k) || SITE_DATA.values[k];
+  });
+  const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'data.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ─── ADD / DELETE SECTIONS ────────────────────────────────────────────────────
+function addSection(ventureId) {
+  const page = document.getElementById(ventureId);
+  const addBtn = page.querySelector('.add-sec-btn');
+  const existing = page.querySelectorAll('.proposal-wrap');
+  const num = String(existing.length + 1).padStart(2, '0');
+  const propKey = ventureId + '-prop-' + num;
+  const wrap = document.createElement('div');
+  wrap.className = 'proposal-wrap';
+  wrap.innerHTML = '<div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">' + num + '</span> New Section</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="' + propKey + '" contenteditable="' + (document.body.classList.contains('edit-mode') ? 'true' : 'false') + '"><div class="prop-section"><p>Add your content here…</p></div></div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div>';
+  addBtn.before(wrap);
+}
+
+function delSection(btn) {
+  const wrap = btn.closest('.proposal-wrap');
+  const key = wrap.querySelector('[data-prop-key]') ? wrap.querySelector('[data-prop-key]').dataset.propKey : null;
+  if (key) localStorage.removeItem('shoulder_prop_' + key);
+  wrap.remove();
+}
+
+// ─── SHOW PAGE / GO TO PAGE ───────────────────────────────────────────────────
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.si').forEach(b => b.classList.remove('active'));
+  const pg = document.getElementById(id);
+  if (pg) pg.classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+
+function goToPage(id) {
+  const btn = document.querySelector('.si[data-page="' + id + '"]');
+  showPage(id, btn);
+  window.scrollTo(0, 0);
+}
+
+// ─── ACCORDION ────────────────────────────────────────────────────────────────
+function toggleProp(header) {
+  const wrap = header.parentElement;
+  const body = wrap.querySelector('.prop-body');
+  const arrow = header.querySelector('.prop-arrow');
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  const ctrl = wrap.querySelector('.section-controls');
+  if (ctrl) ctrl.style.display = isOpen ? 'none' : (document.body.classList.contains('edit-mode') ? 'flex' : 'none');
+  if (arrow) arrow.style.transform = isOpen ? 'rotate(-90deg)' : 'rotate(0deg)';
+}
+
+// ─── IDEAS BOARD ──────────────────────────────────────────────────────────────
+function getIdeas() {
+  try { return JSON.parse(localStorage.getItem('shoulder_ideas') || '[]'); } catch(e) { return []; }
+}
+function saveIdeas(ideas) { localStorage.setItem('shoulder_ideas', JSON.stringify(ideas)); }
+
+function submitIdea() {
+  const title = document.getElementById('ideaTitle').value.trim();
+  const body = document.getElementById('ideaBody').value.trim();
+  const cat = document.getElementById('ideaCat').value;
+  const author = document.getElementById('ideaAuthor').value.trim() || 'Anonymous';
+  if (!title) return;
+  const ideas = getIdeas();
+  ideas.unshift({ id: Date.now(), title, body, cat, author, votes: 0, date: new Date().toLocaleDateString('en-GB') });
+  saveIdeas(ideas);
+  document.getElementById('ideaTitle').value = '';
+  document.getElementById('ideaBody').value = '';
+  document.getElementById('ideaAuthor').value = '';
+  renderIdeas();
+}
+
+function vote(id) {
+  const ideas = getIdeas();
+  const idea = ideas.find(i => i.id === id);
+  if (idea) { idea.votes = (idea.votes || 0) + 1; saveIdeas(ideas); renderIdeas(); }
+}
+
+function selCat(btn, cat) {
+  currentCat = cat;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderIdeas();
+}
+
+function renderIdeas() {
+  const list = document.getElementById('ideasList');
+  if (!list) return;
+  let ideas = getIdeas();
+  if (currentCat !== 'all') ideas = ideas.filter(i => i.cat === currentCat);
+  ideas.sort((a, b) => (b.votes || 0) - (a.votes || 0));
+  const catIcons = { venture:'💡', ops:'⚙️', market:'📈', community:'🤝' };
+  if (!ideas.length) { list.innerHTML = '<div style="text-align:center;color:var(--muted);padding:32px;font-size:13px">No ideas yet — be the first to submit!</div>'; return; }
+  list.innerHTML = ideas.map(idea => '<div class="idea-card"><div class="idea-top"><div><div class="idea-title">' + escHtml(idea.title) + '</div><div class="idea-meta">' + (catIcons[idea.cat] || '💡') + ' ' + idea.cat + ' · ' + escHtml(idea.author) + ' · ' + idea.date + '</div></div><button class="vote-btn" onclick="vote(' + idea.id + ')">▲ ' + (idea.votes || 0) + '</button></div>' + (idea.body ? '<div class="idea-body">' + escHtml(idea.body) + '</div>' : '') + '</div>').join('');
+}
+
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+// ─── TELEGRAM WEBAPP ─────────────────────────────────────────────────────────
+if (window.Telegram && window.Telegram.WebApp) {
+  window.Telegram.WebApp.ready();
+  window.Telegram.WebApp.expand();
+}
+
+// ─── BOOT ─────────────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', initData);
+</script>
+</body>
+</html>

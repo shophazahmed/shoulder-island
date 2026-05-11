@@ -3,256 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Shoulder Island — Integrated Venture Plan 🏝️</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>Shoulder Island — Venture Master Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 :root{
-  --deep:#030810;--teal:#00D4B4;--teal2:#00A896;
-  --sand:#F5C97A;--coral:#FF6B6B;--leaf:#4CAF82;--sky:#48CAE4;
-  --purple:#9B59B6;--amber:#F39C12;
-  --glass:rgba(255,255,255,0.04);--glass2:rgba(255,255,255,0.08);
-  --border:rgba(255,255,255,0.08);--text:#E8F4F0;--muted:rgba(232,244,240,0.50);
-  --r:20px;--rsm:14px;
+  --bg:#08080a;--sur:rgba(255,255,255,.022);--sur2:rgba(255,255,255,.038);
+  --gold:#d4af37;--gdim:rgba(212,175,55,.12);--gb:rgba(212,175,55,.2);
+  --border:rgba(255,255,255,.055);--text:rgba(255,255,255,.88);
+  --text2:rgba(255,255,255,.55);--muted:rgba(255,255,255,.3);
+  --r:12px;--rsm:9px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
-body{background:var(--deep);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 10% 10%,rgba(0,212,180,.07) 0%,transparent 55%),radial-gradient(ellipse 60% 60% at 90% 95%,rgba(72,202,228,.05) 0%,transparent 60%);pointer-events:none;z-index:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden}
 
-/* NAV */
-nav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(3,8,18,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid rgba(0,212,180,.12);display:flex;overflow-x:auto;scrollbar-width:none;padding-bottom:env(safe-area-inset-bottom,0px)}
-nav::-webkit-scrollbar{display:none}
-.nb{flex:1;min-width:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 2px 10px;font-family:'Syne',sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.03em;color:var(--muted);background:none;border:none;cursor:pointer;transition:color .2s;position:relative;white-space:nowrap}
-.nb-icon{font-size:19px;line-height:1;display:block;transition:transform .2s}
-.nb.active{color:var(--teal)}
-.nb.active .nb-icon{transform:translateY(-1px) scale(1.1)}
-.nb.active::before{content:'';position:absolute;top:0;left:18%;right:18%;height:2.5px;background:linear-gradient(90deg,var(--teal2),var(--teal));border-radius:0 0 4px 4px}
+/* SIDEBAR */
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:58px;background:rgba(255,255,255,.016);border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;padding:14px 0 10px;gap:3px;z-index:200}
+.sb-logo{font-family:'DM Serif Display',serif;font-size:10px;color:var(--gold);letter-spacing:.14em;margin-bottom:10px;text-transform:uppercase;opacity:.7}
+.si{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;color:rgba(255,255,255,.22);cursor:pointer;transition:all .18s;border:none;background:none;flex-shrink:0}
+.si.active{background:var(--gdim);color:var(--gold)}
+.si:hover{background:var(--sur2);color:rgba(255,255,255,.5)}
 
 /* PAGES */
-.page{display:none;padding:20px 16px 96px;position:relative;z-index:1}
+.page{display:none;margin-left:58px;min-height:100vh;padding:0 18px 48px}
 .page.active{display:block;animation:pgIn .28s ease}
 @keyframes pgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* TYPOGRAPHY */
-h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-height:1.1;background:linear-gradient(135deg,#fff 30%,var(--teal) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
-.hero-sub{font-size:12px;color:var(--muted);line-height:1.65;max-width:300px;margin:0 auto}
-.sh{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;display:flex;align-items:center;gap:8px}
-.sh::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.08),transparent)}
-.pg-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:4px;background:linear-gradient(135deg,#fff,var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* HOME TOP */
+.home-top{padding:28px 0 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:var(--gdim);border:1px solid var(--gb);color:var(--gold);font-size:9px;font-weight:600;letter-spacing:.08em;padding:4px 10px;border-radius:20px;text-transform:uppercase;flex-shrink:0;margin-top:4px}
+.live-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+h1.hero-title{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;line-height:1.2;color:var(--text);margin-bottom:6px}
+h1.hero-title em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:11px;color:var(--muted);line-height:1.7;max-width:260px}
 
-/* HERO WRAP */
-.hero-wrap{background:linear-gradient(135deg,rgba(0,212,180,.08),rgba(72,202,228,.04));border:1px solid rgba(0,212,180,.14);border-radius:var(--r);padding:26px 20px 22px;margin-bottom:16px;text-align:center;position:relative;overflow:hidden}
-.hero-wrap::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(0,212,180,.1),transparent 70%);pointer-events:none}
+/* SECTION HEADER */
+.sec-hd{display:flex;align-items:center;gap:8px;margin:22px 0 10px}
+.sec-hd-line{width:16px;height:1px;background:var(--gold);opacity:.4;flex-shrink:0}
+.sec-hd-text{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
 /* STATS */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
-.stat{background:linear-gradient(135deg,rgba(0,212,180,.08),rgba(72,202,228,.04));border:1px solid rgba(0,212,180,.14);border-radius:14px;padding:14px 8px;text-align:center}
-.sn{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:var(--teal);line-height:1;margin-bottom:4px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+.stat{background:var(--sur);border:1px solid var(--border);border-radius:var(--r);padding:14px 8px;text-align:center}
+.sn{font-family:'DM Serif Display',serif;font-size:20px;color:var(--gold);line-height:1;margin-bottom:3px}
 .sl{font-size:9px;color:var(--muted);line-height:1.35;text-transform:uppercase;letter-spacing:.04em}
 
-/* BADGE */
-.badge{display:inline-flex;align-items:center;gap:4px;background:rgba(0,212,180,.1);border:1px solid rgba(0,212,180,.22);color:var(--teal);font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:20px;margin-bottom:12px;text-transform:uppercase}
-
-/* NOTE */
-.note{background:linear-gradient(135deg,rgba(245,201,122,.07),rgba(245,201,122,.03));border:1px solid rgba(245,201,122,.18);border-radius:var(--rsm);padding:12px 14px;font-size:12px;color:rgba(245,201,122,.9);line-height:1.65;margin-bottom:12px}
-.note-teal{background:linear-gradient(135deg,rgba(0,212,180,.07),rgba(0,212,180,.03));border-color:rgba(0,212,180,.18);color:rgba(0,212,180,.9)}
-
-/* VENTURE GRID */
-.vc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:4px}
-.vc{border-radius:var(--r);overflow:hidden;cursor:pointer;transition:transform .15s;background:rgba(255,255,255,.03);border:1px solid var(--border)}
-.vc:active{transform:scale(.97)}
-.vc-top{height:72px;position:relative}
-.vc-emoji{position:absolute;bottom:8px;left:12px;font-size:32px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.7));line-height:1}
-.vc-num{position:absolute;top:8px;right:10px;font-family:'Syne',sans-serif;font-size:8px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.4)}
-.vc-body{padding:10px 12px 13px}
-.vc-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:800;margin-bottom:3px;line-height:1.2}
-.vc-sub{font-size:10px;color:var(--muted);line-height:1.35;margin-bottom:8px}
-.vc-rev{display:flex;align-items:center;justify-content:space-between;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--teal)}
-.vc-wide{grid-column:span 2}
-.vcb-hyd{background:linear-gradient(135deg,#0c2a18,#2d6a4f 80%)}
-.vcb-sea{background:linear-gradient(135deg,#021a3e,#004a78 80%)}
-.vcb-plt{background:linear-gradient(135deg,#3a1800,#7a3c00 80%)}
-.vcb-cnt{background:linear-gradient(135deg,#102800,#2c5400 80%)}
-.vcb-swd{background:linear-gradient(135deg,#003030,#005c5c 80%)}
-.vcb-tour{background:linear-gradient(135deg,#200038,#480078 80%)}
-.vcb-sol{background:linear-gradient(135deg,#2a1200,#663800 80%)}
-
-/* PROPOSALS */
-.proposal-wrap{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:var(--rsm);overflow:hidden;margin-bottom:10px}
-.prop-header{padding:14px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:background .2s}
-.prop-header:active{background:var(--glass2)}
-.prop-htitle{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
-.prop-num{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;background:rgba(0,212,180,.15);color:var(--teal);padding:2px 8px;border-radius:20px;flex-shrink:0}
-.prop-arrow{font-size:14px;color:var(--muted);transition:transform .25s;flex-shrink:0}
-.prop-body{display:none;padding:0 16px 16px}
-.prop-body.open{display:block}
-.prop-section{margin-bottom:14px}
-.prop-section h4{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--teal);margin-bottom:6px;letter-spacing:.05em;text-transform:uppercase;padding-bottom:5px;border-bottom:1px solid rgba(0,212,180,.1)}
-.prop-section p,.prop-section li{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:4px}
-.prop-section ul{padding-left:16px}
-.prop-section li{list-style:none;padding-left:0}
-.prop-section li::before{content:"→ ";color:var(--teal);font-size:11px}
-
-/* TABLE */
-.ptable{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px}
-.ptable th{background:rgba(0,212,180,.15);color:var(--teal);padding:8px 10px;text-align:left;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.05em;border-bottom:1px solid var(--border)}
-.ptable td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted)}
-.ptable tr:last-child td{border-bottom:none;font-weight:600;color:var(--teal);background:rgba(0,212,180,.05)}
-.ptable tr:nth-child(even) td{background:rgba(255,255,255,.02)}
-.ptable td.g{color:var(--teal);font-weight:600}
-.risk-high{color:#ff6b6b}.risk-med{color:var(--amber)}.risk-low{color:var(--leaf)}
+/* VENTURE ROWS */
+.v-rows{display:flex;flex-direction:column;gap:2px;margin-bottom:20px}
+.v-row{display:flex;align-items:center;gap:12px;padding:13px 12px;background:var(--sur);border:1px solid var(--border);border-radius:var(--rsm);cursor:pointer;transition:background .15s}
+.v-row:active,.v-row:hover{background:var(--sur2)}
+.v-ri{font-size:20px;width:28px;text-align:center;flex-shrink:0}
+.v-rm{flex:1;min-width:0}
+.v-rt{font-size:13px;font-weight:500;color:var(--text);line-height:1.2;margin-bottom:1px}
+.v-rs{font-size:10px;color:var(--muted)}
+.v-rv{font-family:'DM Serif Display',serif;font-size:13px;color:var(--gold);flex-shrink:0}
+.v-ra{font-size:14px;color:rgba(255,255,255,.18);flex-shrink:0;margin-left:4px}
 
 /* REVENUE */
-.rev-wrap{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:12px}
-.rev-head{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:10px 14px;background:linear-gradient(135deg,rgba(0,212,180,.1),rgba(72,202,228,.05));border-bottom:1px solid var(--border)}
-.rev-head span{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
-.rev-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);align-items:center}
-.rev-row:last-child{border-bottom:none;background:rgba(0,212,180,.06)}
-.rev-row span{font-size:11px}
-.rev-row .vn{font-weight:500}
-.rev-row .am{font-family:'Syne',sans-serif;font-size:11px;color:var(--teal);font-weight:700}
-.rev-row.total span{font-family:'Syne',sans-serif;font-weight:700;font-size:12px;color:var(--teal)}
+.rev-wrap{background:var(--sur);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:12px}
+.rev-head{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:10px 14px;background:var(--gdim);border-bottom:1px solid var(--border)}
+.rev-head span{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.rev-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:9px 14px;border-bottom:1px solid var(--border);align-items:center}
+.rev-row:last-child{border-bottom:none;background:var(--gdim)}
+.rev-row .vn{font-size:11px;font-weight:400;color:var(--text2)}
+.rev-row .am{font-family:'DM Serif Display',serif;font-size:12px;color:var(--gold)}
+.rev-row.total span{font-weight:600;font-size:12px;color:var(--gold)}
 
 /* TIMELINE */
 .tl-wrap{position:relative;padding-left:28px}
-.tl-wrap::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--teal),rgba(0,212,180,.1));border-radius:2px}
-.tl-item{position:relative;margin-bottom:12px;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:var(--rsm);padding:13px 13px 13px 12px}
-.tl-dot{position:absolute;left:-25px;top:18px;width:13px;height:13px;border-radius:50%;background:var(--deep);border:2px solid rgba(0,212,180,.4)}
-.tl-dot.done{background:var(--teal);border-color:var(--teal);box-shadow:0 0 10px rgba(0,212,180,.4)}
-.tl-ph{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:2px}
-.tl-ti{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px}
-.tl-bo{font-size:12px;color:var(--muted);line-height:1.65}
+.tl-wrap::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(212,175,55,.05));border-radius:1px}
+.tl-item{position:relative;margin-bottom:10px;background:var(--sur);border:1px solid var(--border);border-radius:var(--rsm);padding:13px 13px 13px 12px}
+.tl-dot{position:absolute;left:-25px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:1.5px solid rgba(212,175,55,.3)}
+.tl-dot.done{background:var(--gold);border-color:var(--gold);box-shadow:0 0 8px rgba(212,175,55,.35)}
+.tl-ph{font-size:9px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;opacity:.65}
+.tl-ti{font-family:'DM Serif Display',serif;font-size:14px;color:var(--text);margin-bottom:4px}
+.tl-bo{font-size:11px;color:var(--muted);line-height:1.7}
 
 /* MAP */
-.map-box{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px}
-.map-box h3{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--teal);margin-bottom:12px}
+.map-box{background:var(--sur);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:10px}
+.map-box h3{font-size:11px;font-weight:600;color:var(--text2);margin-bottom:12px;letter-spacing:.05em;text-transform:uppercase}
 
 /* SYNERGY */
-.syn-item{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:var(--rsm);padding:13px 15px;margin-bottom:10px}
-.syn-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
-.syn-row{display:flex;align-items:flex-start;gap:8px;margin-bottom:5px;font-size:12px;color:var(--muted);line-height:1.55}
-.sy{color:var(--teal);font-size:11px;flex-shrink:0;margin-top:2px}
+.syn-item{background:var(--sur);border:1px solid var(--border);border-radius:var(--rsm);padding:13px 15px;margin-bottom:8px}
+.syn-title{font-family:'DM Serif Display',serif;font-size:14px;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.syn-row{display:flex;align-items:flex-start;gap:8px;margin-bottom:5px;font-size:11px;color:var(--muted);line-height:1.6}
+.sy{color:var(--gold);font-size:10px;flex-shrink:0;margin-top:2px}
 
-/* PROJECT PAGES */
-.back-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--teal);background:rgba(0,212,180,.08);border:1px solid rgba(0,212,180,.2);border-radius:20px;padding:7px 14px;cursor:pointer;margin-bottom:14px;transition:background .15s}
-.back-btn:active{background:rgba(0,212,180,.16)}
-.proj-banner{height:154px;border-radius:var(--r);position:relative;overflow:hidden;margin-bottom:14px;display:flex;align-items:flex-end;padding:0 18px 16px}
-.proj-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 25%,rgba(0,0,0,.55) 100%);pointer-events:none}
-.proj-banner-emoji{position:absolute;top:18px;left:18px;font-size:52px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.7));z-index:1;line-height:1}
-.proj-banner-content{position:relative;z-index:1;margin-left:78px}
-.proj-label{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:2px}
-.proj-name{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;line-height:1.1}
-.proj-sub{font-size:11px;color:rgba(255,255,255,.65);margin-top:3px;line-height:1.4}
-.pb-hyd{background:linear-gradient(135deg,#0c2a18,#2d6a4f 65%,rgba(76,175,130,.5) 100%)}
-.pb-sea{background:linear-gradient(135deg,#021a3e,#004a78 65%,rgba(72,202,228,.5) 100%)}
-.pb-plt{background:linear-gradient(135deg,#3a1800,#7a3c00 65%,rgba(243,156,18,.5) 100%)}
-.pb-cnt{background:linear-gradient(135deg,#102800,#2c5400 65%,rgba(139,195,74,.5) 100%)}
-.pb-swd{background:linear-gradient(135deg,#003030,#005c5c 65%,rgba(0,212,180,.5) 100%)}
-.pb-tour{background:linear-gradient(135deg,#200038,#480078 65%,rgba(155,89,182,.5) 100%)}
-.pb-sol{background:linear-gradient(135deg,#2a1200,#663800 65%,rgba(245,201,122,.5) 100%)}
-.proj-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-.pkpi{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--rsm);padding:12px 8px;text-align:center}
-.pkpi-n{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:var(--teal);line-height:1;margin-bottom:4px}
+/* NOTE */
+.note{background:rgba(212,175,55,.04);border:1px solid rgba(212,175,55,.1);border-radius:var(--rsm);padding:11px 14px;font-size:11px;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:10px}
+.note-teal{background:var(--sur);border-color:var(--border);color:var(--text2)}
+
+/* BACK BUTTON */
+.back-btn{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--text2);background:var(--sur);border:1px solid var(--border);border-radius:20px;padding:6px 14px;cursor:pointer;margin-bottom:16px;margin-top:20px;transition:all .15s}
+.back-btn:active{background:var(--sur2);color:var(--text)}
+
+/* PROJECT HEADER */
+.proj-hd{display:flex;align-items:center;gap:16px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.proj-icon{width:52px;height:52px;border-radius:12px;background:var(--gdim);border:1px solid var(--gb);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.proj-info{flex:1}
+.proj-label{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;opacity:.65}
+.proj-name{font-family:'DM Serif Display',serif;font-size:22px;font-weight:400;color:var(--text);line-height:1.15;margin-bottom:3px}
+.proj-sub{font-size:11px;color:var(--muted);line-height:1.45}
+
+/* KPIS */
+.proj-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.pkpi{background:var(--sur);border:1px solid var(--border);border-radius:var(--rsm);padding:12px 8px;text-align:center}
+.pkpi-n{font-family:'DM Serif Display',serif;font-size:17px;color:var(--gold);line-height:1;margin-bottom:4px}
 .pkpi-l{font-size:9px;color:var(--muted);line-height:1.35}
-.proj-desc{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:14px;padding:12px 14px;background:rgba(255,255,255,.025);border-radius:var(--rsm);border:1px solid var(--border)}
+.proj-desc{font-size:12px;color:var(--muted);line-height:1.75;margin-bottom:16px;padding:12px 14px;background:var(--sur);border-radius:var(--rsm);border:1px solid var(--border)}
+
+/* PROPOSALS */
+.proposal-wrap{background:var(--sur);border:1px solid var(--border);border-radius:var(--rsm);overflow:hidden;margin-bottom:8px}
+.prop-header{padding:13px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:background .2s}
+.prop-header:active{background:var(--sur2)}
+.prop-htitle{font-family:'DM Serif Display',serif;font-size:14px;display:flex;align-items:center;gap:8px;color:var(--text)}
+.prop-num{font-size:10px;font-weight:600;background:var(--gdim);color:var(--gold);padding:2px 8px;border-radius:20px;flex-shrink:0;font-family:'Inter',sans-serif;letter-spacing:.04em}
+.prop-arrow{font-size:12px;color:var(--muted);transition:transform .25s;flex-shrink:0}
+.prop-body{display:none;padding:0 16px 16px}
+.prop-body.open{display:block}
+.prop-section{margin-bottom:14px}
+.prop-section h4{font-size:10px;font-weight:600;color:var(--gold);margin-bottom:6px;letter-spacing:.06em;text-transform:uppercase;padding-bottom:5px;border-bottom:1px solid rgba(212,175,55,.08);opacity:.75}
+.prop-section p,.prop-section li{font-size:12px;color:var(--muted);line-height:1.75;margin-bottom:4px}
+.prop-section ul{padding-left:16px}
+.prop-section li{list-style:none;padding-left:0}
+.prop-section li::before{content:"→ ";color:var(--gold);font-size:11px;opacity:.7}
+
+/* TABLE */
+.ptable{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px}
+.ptable th{background:var(--gdim);color:var(--gold);padding:8px 10px;text-align:left;font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.ptable td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--muted)}
+.ptable tr:last-child td{border-bottom:none;font-weight:500;color:var(--gold);background:rgba(212,175,55,.04)}
+.ptable tr:nth-child(even) td{background:var(--sur)}
+.ptable td.g{color:var(--gold);font-weight:500}
+.risk-high{color:#ff6b6b}.risk-med{color:#f39c12}.risk-low{color:#4caf82}
 
 /* COVER CARD */
-.cover-card{background:linear-gradient(135deg,rgba(0,212,180,.12),rgba(72,202,228,.06));border:1px solid rgba(0,212,180,.2);border-radius:18px;padding:20px;margin-bottom:16px;text-align:center}
-.cover-card .island-emoji{font-size:44px;margin-bottom:8px;display:block}
-.cover-card h2{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;margin-bottom:5px}
+.cover-card{background:var(--gdim);border:1px solid var(--gb);border-radius:var(--r);padding:20px;margin-bottom:14px;text-align:center}
+.cover-card .island-emoji{font-size:38px;margin-bottom:8px;display:block}
+.cover-card h2{font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;margin-bottom:4px;color:var(--text)}
 .cover-card p{font-size:12px;color:var(--muted);line-height:1.6}
 .cover-divider{border:none;border-top:1px solid var(--border);margin:12px 0}
 .cover-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left}
-.cm-item span:first-child{font-family:'Syne',sans-serif;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:2px}
-.cm-item span:last-child{font-size:11px;color:var(--text)}
+.cm-item span:first-child{font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:2px;opacity:.65}
+.cm-item span:last-child{font-size:11px;color:var(--text2)}
 
 /* IDEAS */
-.idea-form{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:16px}
-.iinput{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:10px;padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text);outline:none;resize:none;margin-bottom:8px;transition:border .2s}
-.iinput:focus{border-color:var(--teal)}
+.pg-title{font-family:'DM Serif Display',serif;font-size:22px;font-weight:400;color:var(--text);margin-bottom:4px;padding-top:28px}
+.idea-form{background:var(--sur);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.iinput{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);outline:none;resize:none;margin-bottom:8px;transition:border .2s}
+.iinput:focus{border-color:rgba(212,175,55,.3)}
 .iinput::placeholder{color:var(--muted)}
 .cats{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
-.cbt{padding:6px 12px;border-radius:20px;font-family:'Syne',sans-serif;font-size:10px;font-weight:600;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;transition:all .15s}
-.cbt.sel{background:rgba(0,212,180,.15);border-color:var(--teal);color:var(--teal)}
-.sbtn{width:100%;background:linear-gradient(135deg,var(--teal2),var(--teal));border:none;border-radius:12px;padding:13px;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--deep);cursor:pointer;transition:opacity .2s}
+.cbt{padding:5px 11px;border-radius:20px;font-size:10px;font-weight:500;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;transition:all .15s}
+.cbt.sel{background:var(--gdim);border-color:var(--gb);color:var(--gold)}
+.sbtn{width:100%;background:var(--gold);border:none;border-radius:10px;padding:12px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:#08080a;cursor:pointer;transition:opacity .2s}
 .sbtn:active{opacity:.8}
-.icard{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:var(--rsm);padding:14px 16px;margin-bottom:10px;animation:si .3s ease}
-@keyframes si{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.icard{background:var(--sur);border:1px solid var(--border);border-radius:var(--rsm);padding:14px 16px;margin-bottom:8px;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .imeta{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.iauth{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--teal)}
+.iauth{font-size:11px;font-weight:500;color:var(--gold)}
 .itime{font-size:10px;color:var(--muted)}
-.icat-b{display:inline-block;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;background:rgba(0,212,180,.12);color:var(--teal);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
-.itxt{font-size:13px;color:var(--text);line-height:1.5}
+.icat-b{display:inline-block;font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--gdim);color:var(--gold);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.itxt{font-size:13px;color:var(--text);line-height:1.55}
 .ivotes{display:flex;align-items:center;gap:6px;margin-top:10px}
-.vbt{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:4px}
-.vbt.voted{background:rgba(0,212,180,.15);border-color:var(--teal);color:var(--teal)}
+.vbt{background:var(--sur);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:4px}
+.vbt.voted{background:var(--gdim);border-color:var(--gb);color:var(--gold)}
 .empty{text-align:center;padding:30px 20px;color:var(--muted);font-size:13px}
 .empty .ei{font-size:32px;margin-bottom:10px}
 </style>
 </head>
 <body>
-<nav>
-  <button class="nb active" data-page="home" onclick="showPage('home',this)"><span class="nb-icon">🏝️</span>Home</button>
-  <button class="nb" data-page="v1" onclick="showPage('v1',this)"><span class="nb-icon">🌿</span>Hydro</button>
-  <button class="nb" data-page="v2" onclick="showPage('v2',this)"><span class="nb-icon">🐟</span>Sea</button>
-  <button class="nb" data-page="v3" onclick="showPage('v3',this)"><span class="nb-icon">🐔</span>Poultry</button>
-  <button class="nb" data-page="v4" onclick="showPage('v4',this)"><span class="nb-icon">🥥</span>Coconut</button>
-  <button class="nb" data-page="v5" onclick="showPage('v5',this)"><span class="nb-icon">🌊</span>Seaweed</button>
-  <button class="nb" data-page="v6" onclick="showPage('v6',this)"><span class="nb-icon">🤿</span>Tourism</button>
-  <button class="nb" data-page="v7" onclick="showPage('v7',this)"><span class="nb-icon">☀️</span>Solar</button>
-  <button class="nb" data-page="ideas" onclick="showPage('ideas',this)"><span class="nb-icon">💬</span>Ideas</button>
-</nav>
 
-<!-- ═══ HOME (merged: overview + ventures + revenue + timeline + synergies + map) ═══ -->
+<aside class="sidebar">
+  <div class="sb-logo">SI</div>
+  <button class="si active" data-page="home" onclick="showPage('home',this)" title="Home">🏝️</button>
+  <button class="si" data-page="v1" onclick="showPage('v1',this)" title="Hydroponics">🌿</button>
+  <button class="si" data-page="v2" onclick="showPage('v2',this)" title="Sea Cucumber">🐟</button>
+  <button class="si" data-page="v3" onclick="showPage('v3',this)" title="Poultry">🐔</button>
+  <button class="si" data-page="v4" onclick="showPage('v4',this)" title="Coconut">🥥</button>
+  <button class="si" data-page="v5" onclick="showPage('v5',this)" title="Seaweed">🌊</button>
+  <button class="si" data-page="v6" onclick="showPage('v6',this)" title="Tourism">🤿</button>
+  <button class="si" data-page="v7" onclick="showPage('v7',this)" title="Solar">☀️</button>
+  <button class="si" data-page="ideas" onclick="showPage('ideas',this)" title="Ideas">💬</button>
+</aside>
+
+<!-- ═══ HOME ═══ -->
 <div id="home" class="page active">
-  <div class="hero-wrap">
-    <div class="badge">🇲🇻 Maldives Island Investment</div>
-    <h1 class="hero-title">Shoulder Island<br>Venture Master Plan</h1>
-    <p class="hero-sub">An integrated land + lagoon farming ecosystem. 7 profit centres, one leased island, circular economy.</p>
+  <div class="home-top">
+    <div>
+      <h1 class="hero-title">Shoulder Island<br><em>Venture Plan</em></h1>
+      <p class="hero-sub">7 profit centres · one leased island · circular economy · Maldives 🇲🇻</p>
+    </div>
+    <div class="live-badge"><span class="live-dot"></span>Live Plan</div>
   </div>
+
   <div class="stats">
     <div class="stat"><div class="sn">7</div><div class="sl">Profit<br>Centres</div></div>
     <div class="stat"><div class="sn">$2.1M</div><div class="sl">Year 2<br>Revenue</div></div>
     <div class="stat"><div class="sn">$10M+</div><div class="sl">Year 3+<br>Potential</div></div>
   </div>
 
-  <div class="sh">💡 7 Profit Centres — tap to explore</div>
-  <div class="vc-grid">
-    <div class="vc" onclick="goToPage('v1')">
-      <div class="vc-top vcb-hyd"><span class="vc-emoji">🌿</span><span class="vc-num">VENTURE 01</span></div>
-      <div class="vc-body"><div class="vc-name">Hydroponics</div><div class="vc-sub">Soil-free fresh produce for resorts</div><div class="vc-rev"><span>$120K/yr</span><span>→</span></div></div>
+  <div class="sec-hd"><span class="sec-hd-line"></span><span class="sec-hd-text">7 Profit Centres — tap to explore</span></div>
+  <div class="v-rows">
+    <div class="v-row" onclick="goToPage('v1')">
+      <span class="v-ri">🌿</span>
+      <div class="v-rm"><div class="v-rt">Hydroponics</div><div class="v-rs">Land · Soil-free fresh produce for resorts</div></div>
+      <span class="v-rv">$120K</span><span class="v-ra">›</span>
     </div>
-    <div class="vc" onclick="goToPage('v2')">
-      <div class="vc-top vcb-sea"><span class="vc-emoji">🐟</span><span class="vc-num">VENTURE 02</span></div>
-      <div class="vc-body"><div class="vc-name">Sea Cucumber</div><div class="vc-sub">Premium H. scabra aquaculture</div><div class="vc-rev"><span>$8.4M at scale</span><span>→</span></div></div>
+    <div class="v-row" onclick="goToPage('v2')">
+      <span class="v-ri">🐟</span>
+      <div class="v-rm"><div class="v-rt">Sea Cucumber</div><div class="v-rs">Lagoon · Premium H. scabra aquaculture</div></div>
+      <span class="v-rv">$8.4M</span><span class="v-ra">›</span>
     </div>
-    <div class="vc" onclick="goToPage('v3')">
-      <div class="vc-top vcb-plt"><span class="vc-emoji">🐔</span><span class="vc-num">VENTURE 03</span></div>
-      <div class="vc-body"><div class="vc-name">Poultry Farm</div><div class="vc-sub">Broiler meat + layer eggs</div><div class="vc-rev"><span>$1.06M/yr</span><span>→</span></div></div>
+    <div class="v-row" onclick="goToPage('v3')">
+      <span class="v-ri">🐔</span>
+      <div class="v-rm"><div class="v-rt">Poultry Farm</div><div class="v-rs">Land · Broiler meat + layer eggs</div></div>
+      <span class="v-rv">$1.06M</span><span class="v-ra">›</span>
     </div>
-    <div class="vc" onclick="goToPage('v4')">
-      <div class="vc-top vcb-cnt"><span class="vc-emoji">🥥</span><span class="vc-num">VENTURE 04</span></div>
-      <div class="vc-body"><div class="vc-name">Coconut + VCO</div><div class="vc-sub">Near-zero raw material cost</div><div class="vc-rev"><span>$80K/yr</span><span>→</span></div></div>
+    <div class="v-row" onclick="goToPage('v4')">
+      <span class="v-ri">🥥</span>
+      <div class="v-rm"><div class="v-rt">Coconut + VCO</div><div class="v-rs">Land · Near-zero raw material cost</div></div>
+      <span class="v-rv">$80K</span><span class="v-ra">›</span>
     </div>
-    <div class="vc" onclick="goToPage('v5')">
-      <div class="vc-top vcb-swd"><span class="vc-emoji">🌊</span><span class="vc-num">VENTURE 05</span></div>
-      <div class="vc-body"><div class="vc-name">Seaweed + IMTA</div><div class="vc-sub">Lagoon polyculture system</div><div class="vc-rev"><span>$120K/yr</span><span>→</span></div></div>
+    <div class="v-row" onclick="goToPage('v5')">
+      <span class="v-ri">🌊</span>
+      <div class="v-rm"><div class="v-rt">Seaweed + IMTA</div><div class="v-rs">Lagoon · Polyculture + carbon credits</div></div>
+      <span class="v-rv">$120K</span><span class="v-ra">›</span>
     </div>
-    <div class="vc" onclick="goToPage('v6')">
-      <div class="vc-top vcb-tour"><span class="vc-emoji">🤿</span><span class="vc-num">VENTURE 06</span></div>
-      <div class="vc-body"><div class="vc-name">Eco Tourism</div><div class="vc-sub">Day trips — no overnight infra</div><div class="vc-rev"><span>$480K/yr</span><span>→</span></div></div>
+    <div class="v-row" onclick="goToPage('v6')">
+      <span class="v-ri">🤿</span>
+      <div class="v-rm"><div class="v-rt">Eco Tourism</div><div class="v-rs">Day trips · No overnight infra required</div></div>
+      <span class="v-rv">$480K</span><span class="v-ra">›</span>
     </div>
-    <div class="vc vc-wide" onclick="goToPage('v7')" style="display:flex;align-items:stretch">
-      <div class="vc-top vcb-sol" style="width:90px;flex-shrink:0;height:auto;min-height:72px"><span class="vc-emoji" style="top:50%;transform:translateY(-50%);bottom:auto;font-size:30px">☀️</span><span class="vc-num">VENTURE 07</span></div>
-      <div class="vc-body" style="flex:1;display:flex;align-items:center;justify-content:space-between">
-        <div><div class="vc-name">Solar + Compost + Carbon</div><div class="vc-sub" style="margin-bottom:0">Zero-waste circular island system</div></div>
-        <div style="text-align:right;flex-shrink:0;margin-left:8px"><div style="font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--teal)">$80K/yr →</div><div style="font-size:9px;color:var(--muted);margin-top:2px">+ $30K saved</div></div>
-      </div>
+    <div class="v-row" onclick="goToPage('v7')">
+      <span class="v-ri">☀️</span>
+      <div class="v-rm"><div class="v-rt">Solar + Circular</div><div class="v-rs">Infrastructure · Zero-waste island system</div></div>
+      <span class="v-rv">$80K</span><span class="v-ra">›</span>
     </div>
   </div>
 
-  <div class="sh">💰 Revenue Forecast</div>
+  <div class="sec-hd"><span class="sec-hd-line"></span><span class="sec-hd-text">Revenue Forecast</span></div>
   <div class="note">⚠️ All figures are conservative. Resort premium pricing, organic certification, and carbon credits can significantly exceed these projections.</div>
   <div class="rev-wrap">
     <div class="rev-head"><span>Venture</span><span>Yr 1</span><span>Yr 2</span><span>Yr 3+</span></div>
@@ -265,33 +257,34 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
     <div class="rev-row"><span class="vn">☀️ Solar+Compost</span><span class="am">$20K</span><span class="am">$47K</span><span class="am">$80K</span></div>
     <div class="rev-row total"><span>TOTAL GROSS</span><span>$837K</span><span>$2.1M</span><span>$10.3M+</span></div>
   </div>
-  <div class="syn-item"><div class="syn-title">🚀 Start First — Year 1</div><div class="syn-row"><span class="sy">1</span><span><strong>Hydroponics</strong> — transfer existing system. Revenue within 30 days of setup</span></div><div class="syn-row"><span class="sy">2</span><span><strong>Poultry</strong> — proven demand, proposal ready. First eggs Month 5, first broiler harvest Month 7</span></div><div class="syn-row"><span class="sy">3</span><span><strong>Coconut/VCO</strong> — raw material is already on the island. Begin processing Month 3</span></div></div>
-  <div class="syn-item"><div class="syn-title">💎 Scale These — Year 2+</div><div class="syn-row"><span class="sy">1</span><span><strong>Sea Cucumber</strong> — USD 8.4M at full export scale. The lagoon is the goldmine</span></div><div class="syn-row"><span class="sy">2</span><span><strong>Eco Tourism</strong> — USD 480K at 20 guests/day. Funds operations while aquaculture scales</span></div><div class="syn-row"><span class="sy">3</span><span><strong>Seaweed IMTA</strong> — multiplies lagoon yield 3–4× by adding seaweed + shrimp to sea cucumber pens</span></div></div>
-  <div class="syn-item"><div class="syn-title">💰 Capital Required</div><div class="syn-row"><span class="sy">→</span><span>Hydroponics (transfer): USD ~51K</span></div><div class="syn-row"><span class="sy">→</span><span>Poultry (Phase 1): USD ~193K</span></div><div class="syn-row"><span class="sy">→</span><span>Sea Cucumber (Phase 1): USD ~209K</span></div><div class="syn-row"><span class="sy">→</span><span>Coconut/VCO: USD ~24K | Seaweed + IMTA: USD ~27K</span></div><div class="syn-row"><span class="sy">→</span><span>Eco Tourism: USD ~72K | Solar + Compost: USD ~89K</span></div><div class="syn-row"><span class="sy" style="color:var(--teal);font-weight:700">≈</span><span><strong style="color:var(--teal)">Total Phase 1 investment: ~USD 665,000</strong></span></div></div>
 
-  <div class="sh">📅 3-Year Roadmap</div>
+  <div class="syn-item"><div class="syn-title">🚀 Start First — Year 1</div><div class="syn-row"><span class="sy">1</span><span><strong>Hydroponics</strong> — transfer existing system. Revenue within 30 days of setup</span></div><div class="syn-row"><span class="sy">2</span><span><strong>Poultry</strong> — proven demand, proposal ready. First eggs Month 5, broiler harvest Month 7</span></div><div class="syn-row"><span class="sy">3</span><span><strong>Coconut/VCO</strong> — raw material already on the island. Begin processing Month 3</span></div></div>
+  <div class="syn-item"><div class="syn-title">💎 Scale These — Year 2+</div><div class="syn-row"><span class="sy">1</span><span><strong>Sea Cucumber</strong> — USD 8.4M at full export scale. The lagoon is the goldmine</span></div><div class="syn-row"><span class="sy">2</span><span><strong>Eco Tourism</strong> — USD 480K at 20 guests/day. Funds operations while aquaculture scales</span></div><div class="syn-row"><span class="sy">3</span><span><strong>Seaweed IMTA</strong> — multiplies lagoon yield 3–4× by adding seaweed + shrimp to sea cucumber pens</span></div></div>
+  <div class="syn-item"><div class="syn-title">💰 Capital Required</div><div class="syn-row"><span class="sy">→</span><span>Hydroponics (transfer): USD ~51K</span></div><div class="syn-row"><span class="sy">→</span><span>Poultry (Phase 1): USD ~193K</span></div><div class="syn-row"><span class="sy">→</span><span>Sea Cucumber (Phase 1): USD ~209K</span></div><div class="syn-row"><span class="sy">→</span><span>Coconut/VCO: USD ~24K · Seaweed + IMTA: USD ~27K</span></div><div class="syn-row"><span class="sy">→</span><span>Eco Tourism: USD ~72K · Solar + Compost: USD ~89K</span></div><div class="syn-row"><span class="sy" style="color:var(--gold)">≈</span><span><strong style="color:var(--gold)">Total Phase 1 investment: ~USD 665,000</strong></span></div></div>
+
+  <div class="sec-hd"><span class="sec-hd-line"></span><span class="sec-hd-text">3-Year Roadmap</span></div>
   <div class="tl-wrap">
-    <div class="tl-item"><div class="tl-dot done"></div><div class="tl-ph">Months 1–3 — Admin & Lease</div><div class="tl-ti">Secure Island & Planning</div><div class="tl-bo">Apply for uninhabited island lease via Ministry of Agriculture / Ministry of Economy. Commission site survey, EIA, and master plan. Register company and apply for import duty exemptions. Sign MOU with 2+ resort buyers. Apply for relevant licences across all ventures in parallel.</div></div>
+    <div class="tl-item"><div class="tl-dot done"></div><div class="tl-ph">Months 1–3 — Admin &amp; Lease</div><div class="tl-ti">Secure Island &amp; Planning</div><div class="tl-bo">Apply for uninhabited island lease via Ministry of Agriculture / Ministry of Economy. Commission site survey, EIA, and master plan. Register company and apply for import duty exemptions. Sign MOU with 2+ resort buyers. Apply for relevant licences across all ventures in parallel.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Months 3–6 — Build</div><div class="tl-ti">Infrastructure Construction</div><div class="tl-bo">Install solar microgrid + battery storage. Build poultry sheds, hydroponic polytunnels, cold room, staff quarters, and initial jetty. Establish water supply (rainwater + RO). Construct composting bays and BSF module.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Months 3–4 — Operations Start</div><div class="tl-ti">Transfer Hydroponics + Start Coconut</div><div class="tl-bo">Transfer hydroponic equipment and stock from existing island. Begin first planting cycle. Start coconut harvest and VCO pressing. First resort supply deliveries by Month 4.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Months 4–8 — Poultry Live</div><div class="tl-ti">First Poultry Harvest</div><div class="tl-bo">Import Day-Old Chicks and point-of-lay pullets. First egg collection Month 5. First broiler harvest and resort delivery Month 7. Sign first B2B supply agreements with resorts.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Months 9–12 — Lagoon Launch</div><div class="tl-ti">Seaweed + Sea Cucumber + Tourism</div><div class="tl-bo">Deploy Kappaphycus longlines in lagoon. Sea cucumber hatchery commissioned; first spawning cycle begins. First seaweed harvest at Month 11. Launch eco-tourism day trips. Apply for Verra carbon credit registration.</div></div>
-    <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Year 2 — Scale Up</div><div class="tl-ti">Full Operations & Aquaculture Growth</div><div class="tl-bo">Scale poultry to 10,000 broilers + 5,000 layers. Sea cucumber juveniles transferred to lagoon grow-out pens. Add IMTA lobster/shrimp. Expand eco-tourism to 5 days/week. Expand hydroponic area to 1,500 m².</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Year 2 — Scale Up</div><div class="tl-ti">Full Operations &amp; Aquaculture Growth</div><div class="tl-bo">Scale poultry to 10,000 broilers + 5,000 layers. Sea cucumber juveniles transferred to lagoon grow-out pens. Add IMTA lobster/shrimp. Expand eco-tourism to 5 days/week. Expand hydroponic area to 1,500 m².</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Months 20–24 — First Export</div><div class="tl-ti">Sea Cucumber Export Revenue Begins</div><div class="tl-bo">Sea cucumbers reach 350–425g harvest size. First commercial processing: evisceration, boiling, smoking, drying to beche-de-mer. First export shipment to Chinese buyer. Second hatchery cycle begins immediately.</div></div>
     <div class="tl-item"><div class="tl-dot"></div><div class="tl-ph">Year 3+ — Full Scale</div><div class="tl-ti">Export + Carbon + Expansion</div><div class="tl-bo">Sea cucumber at 7+ MT/year dried → USD 1M+ export, scaling toward USD 8.4M. All ventures at design capacity. Receive first Verra carbon credit payments. Explore pearl culture and coral nursery grants.</div></div>
   </div>
 
-  <div class="sh">🔗 Circular Economy</div>
+  <div class="sec-hd"><span class="sec-hd-line"></span><span class="sec-hd-text">Circular Economy</span></div>
   <div class="note">🔗 Every venture feeds the others — reducing costs, eliminating waste, and multiplying total revenue from the same inputs.</div>
   <div class="syn-item"><div class="syn-title">🐔 Poultry ↔ 🌿 Hydroponics</div><div class="syn-row"><span class="sy">→</span><span>Hydroponic waste (stems, roots, unsold greens) = free poultry feed. Saves 10–15% on feed costs annually</span></div><div class="syn-row"><span class="sy">→</span><span>Poultry manure composted → premium grow media for hydroponics. Closes the nutrient loop</span></div><div class="syn-row"><span class="sy">→</span><span>Black Soldier Fly larvae (fed on farm food waste) → high-protein chicken feed. Cuts feed bill 20–30%</span></div></div>
   <div class="syn-item"><div class="syn-title">🐟 Sea Cucumber ↔ 🌊 Seaweed (IMTA)</div><div class="syn-row"><span class="sy">→</span><span>Seaweed absorbs nitrogen from fish/shrimp waste — acts as natural bio-filter. Zero chemical treatment</span></div><div class="syn-row"><span class="sy">→</span><span>Sea cucumbers feed on organic detritus settling below seaweed lines — cleaning the lagoon floor passively</span></div><div class="syn-row"><span class="sy">→</span><span>IMTA system increases revenue per hectare 200–400% vs single-species</span></div></div>
   <div class="syn-item"><div class="syn-title">☀️ Solar ↔ Cold Chain ↔ All Ventures</div><div class="syn-row"><span class="sy">→</span><span>Solar powers cold room for chicken, eggs, dried sea cucumber, VCO — preserving premium quality for export</span></div><div class="syn-row"><span class="sy">→</span><span>All organic waste → bagged compost → sold to resort gardens. Near-zero extra cost, pure revenue</span></div><div class="syn-row"><span class="sy">→</span><span>Coconut shells → biochar → mixed into compost for premium "terra preta" product at 30% price premium</span></div></div>
-  <div class="syn-item"><div class="syn-title">🤿 Eco Tourism ↔ All Ventures</div><div class="syn-row"><span class="sy">→</span><span>Resort guests tour the farm → resort F&B managers sign supply contracts for eggs, chicken, herbs, VCO</span></div><div class="syn-row"><span class="sy">→</span><span>Day-trip income covers island operating costs in Years 1–2 while aquaculture is scaling up</span></div><div class="syn-row"><span class="sy">→</span><span>Coral nursery at jetty → conservation story → qualifies for GFCR grant funding</span></div></div>
+  <div class="syn-item"><div class="syn-title">🤿 Eco Tourism ↔ All Ventures</div><div class="syn-row"><span class="sy">→</span><span>Resort guests tour the farm → resort F&amp;B managers sign supply contracts for eggs, chicken, herbs, VCO</span></div><div class="syn-row"><span class="sy">→</span><span>Day-trip income covers island operating costs in Years 1–2 while aquaculture is scaling up</span></div><div class="syn-row"><span class="sy">→</span><span>Coral nursery at jetty → conservation story → qualifies for GFCR grant funding</span></div></div>
   <div class="syn-item"><div class="syn-title">🥥 Coconut ↔ Everything</div><div class="syn-row"><span class="sy">→</span><span>Palms already growing — almost zero raw material cost. Every product = near-100% margin on raw material</span></div><div class="syn-row"><span class="sy">→</span><span>Coconut water → poultry electrolyte supplement. Coir husks replace imported coco peat in hydroponics</span></div></div>
 
-  <div class="sh">🗺️ Island Map</div>
+  <div class="sec-hd"><span class="sec-hd-line"></span><span class="sec-hd-text">Island Map</span></div>
   <div class="map-box">
-    <h3>🗺️ Conceptual Zone Layout</h3>
+    <h3>Conceptual Zone Layout</h3>
     <svg viewBox="0 0 340 300" width="100%" style="border-radius:10px;display:block">
       <defs>
         <radialGradient id="og" cx="50%" cy="50%"><stop offset="0%" stop-color="#083060"/><stop offset="100%" stop-color="#020e1e"/></radialGradient>
@@ -302,51 +295,47 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
       <ellipse cx="170" cy="150" rx="155" ry="120" fill="url(#lg)"/>
       <ellipse cx="170" cy="150" rx="100" ry="62" fill="#d4a96a" opacity=".22"/>
       <ellipse cx="170" cy="150" rx="92" ry="55" fill="url(#ig)"/>
-      <rect x="118" y="112" width="52" height="30" rx="5" fill="#1a1a0a" stroke="#F39C12" stroke-width="1.5" opacity=".92"/>
+      <rect x="118" y="112" width="52" height="30" rx="5" fill="#1a1a0a" stroke="#d4af37" stroke-width="1.5" opacity=".92"/>
       <text x="144" y="124" text-anchor="middle" font-size="10">🐔</text>
-      <text x="144" y="135" text-anchor="middle" font-size="7" fill="#F39C12" font-weight="bold">POULTRY</text>
-      <rect x="182" y="108" width="52" height="30" rx="5" fill="#0a1a0a" stroke="#4CAF82" stroke-width="1.5" opacity=".92"/>
+      <text x="144" y="135" text-anchor="middle" font-size="7" fill="#d4af37" font-weight="bold">POULTRY</text>
+      <rect x="182" y="108" width="52" height="30" rx="5" fill="#0a1a0a" stroke="#d4af37" stroke-width="1.5" opacity=".92"/>
       <text x="208" y="120" text-anchor="middle" font-size="10">🌿</text>
-      <text x="208" y="131" text-anchor="middle" font-size="7" fill="#4CAF82" font-weight="bold">HYDRO</text>
-      <rect x="130" y="157" width="52" height="28" rx="5" fill="#0a150a" stroke="#8BC34A" stroke-width="1.5" opacity=".92"/>
+      <text x="208" y="131" text-anchor="middle" font-size="7" fill="#d4af37" font-weight="bold">HYDRO</text>
+      <rect x="130" y="157" width="52" height="28" rx="5" fill="#0a150a" stroke="#d4af37" stroke-width="1.5" opacity=".92"/>
       <text x="156" y="169" text-anchor="middle" font-size="10">🥥</text>
-      <text x="156" y="179" text-anchor="middle" font-size="7" fill="#8BC34A" font-weight="bold">COCONUT</text>
-      <rect x="190" y="154" width="50" height="28" rx="5" fill="#1a1000" stroke="#F5C97A" stroke-width="1.5" opacity=".92"/>
+      <text x="156" y="179" text-anchor="middle" font-size="7" fill="#d4af37" font-weight="bold">COCONUT</text>
+      <rect x="190" y="154" width="50" height="28" rx="5" fill="#1a1000" stroke="#d4af37" stroke-width="1.5" opacity=".92"/>
       <text x="215" y="165" text-anchor="middle" font-size="10">☀️</text>
-      <text x="215" y="176" text-anchor="middle" font-size="7" fill="#F5C97A" font-weight="bold">SOLAR</text>
-      <rect x="20" y="124" width="72" height="32" rx="7" fill="rgba(10,30,50,.9)" stroke="#48CAE4" stroke-width="1.5"/>
+      <text x="215" y="176" text-anchor="middle" font-size="7" fill="#d4af37" font-weight="bold">SOLAR</text>
+      <rect x="20" y="124" width="72" height="32" rx="7" fill="rgba(10,30,50,.9)" stroke="#d4af37" stroke-width="1.5"/>
       <text x="56" y="136" text-anchor="middle" font-size="10">🐠</text>
-      <text x="56" y="147" text-anchor="middle" font-size="7" fill="#48CAE4" font-weight="bold">SEA CUCUMBER</text>
-      <rect x="250" y="120" width="68" height="32" rx="7" fill="rgba(5,25,35,.9)" stroke="#00D4B4" stroke-width="1.5"/>
+      <text x="56" y="147" text-anchor="middle" font-size="7" fill="#d4af37" font-weight="bold">SEA CUCUMBER</text>
+      <rect x="250" y="120" width="68" height="32" rx="7" fill="rgba(5,25,35,.9)" stroke="#d4af37" stroke-width="1.5"/>
       <text x="284" y="132" text-anchor="middle" font-size="10">🌊</text>
-      <text x="284" y="143" text-anchor="middle" font-size="7" fill="#00D4B4" font-weight="bold">SEAWEED</text>
-      <rect x="128" y="218" width="84" height="28" rx="7" fill="rgba(20,5,35,.9)" stroke="#9B59B6" stroke-width="1.5"/>
+      <text x="284" y="143" text-anchor="middle" font-size="7" fill="#d4af37" font-weight="bold">SEAWEED</text>
+      <rect x="128" y="218" width="84" height="28" rx="7" fill="rgba(20,5,35,.9)" stroke="#d4af37" stroke-width="1.5"/>
       <text x="170" y="229" text-anchor="middle" font-size="10">🤿</text>
-      <text x="170" y="240" text-anchor="middle" font-size="7" fill="#9B59B6" font-weight="bold">ECO TOURISM JETTY</text>
-      <line x1="92" y1="140" x2="118" y2="133" stroke="#48CAE4" stroke-width="1" stroke-dasharray="3,2" opacity=".6"/>
-      <line x1="250" y1="136" x2="232" y2="150" stroke="#00D4B4" stroke-width="1" stroke-dasharray="3,2" opacity=".6"/>
-      <line x1="170" y1="218" x2="170" y2="193" stroke="#9B59B6" stroke-width="1" stroke-dasharray="3,2" opacity=".6"/>
-      <rect x="6" y="258" width="150" height="36" rx="5" fill="rgba(4,15,30,.9)"/>
-      <rect x="12" y="264" width="8" height="8" fill="#2d6a4f" rx="1"/><text x="24" y="271" font-size="7" fill="#aaa">Island land</text>
-      <rect x="12" y="276" width="8" height="8" fill="#1a7fa0" rx="1" opacity=".6"/><text x="24" y="283" font-size="7" fill="#aaa">Lagoon zone</text>
-      <line x1="78" y1="268" x2="88" y2="268" stroke="#00D4B4" stroke-width="1.5" stroke-dasharray="3,2"/><text x="92" y="271" font-size="7" fill="#aaa">Resource flow</text>
+      <text x="170" y="240" text-anchor="middle" font-size="7" fill="#d4af37" font-weight="bold">ECO TOURISM JETTY</text>
+      <line x1="92" y1="140" x2="118" y2="133" stroke="#d4af37" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+      <line x1="250" y1="136" x2="232" y2="150" stroke="#d4af37" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
+      <line x1="170" y1="218" x2="170" y2="193" stroke="#d4af37" stroke-width="1" stroke-dasharray="3,2" opacity=".5"/>
     </svg>
   </div>
   <div class="note">📌 Actual zoning subject to island survey, topography, and EPA Environmental Impact Assessment. Layout is conceptual only.</div>
   <div class="map-box">
-    <h3>📍 View on Google Maps</h3>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:10px">Shared project map — add pins and notes for your team.</p>
-    <a href="https://www.google.com/maps/d/edit?mid=1MSY--prD23lrO5eHKe71Jfn4zsZO2ys&usp=sharing" target="_blank" style="display:block;background:rgba(0,212,180,.12);border:1px solid rgba(0,212,180,.25);border-radius:10px;padding:12px 16px;text-decoration:none;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--teal);text-align:center">🗺️ Open Team Map in Google Maps →</a>
+    <h3>View on Google Maps</h3>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:10px">Shared project map — add pins and notes for your team.</p>
+    <a href="https://www.google.com/maps/d/edit?mid=1MSY--prD23lrO5eHKe71Jfn4zsZO2ys&usp=sharing" target="_blank" style="display:block;background:var(--gdim);border:1px solid var(--gb);border-radius:10px;padding:12px 16px;text-decoration:none;font-size:12px;font-weight:600;color:var(--gold);text-align:center">🗺️ Open Team Map in Google Maps →</a>
   </div>
 </div>
 
 <!-- ═══ VENTURE 1: HYDROPONICS ═══ -->
 <div id="v1" class="page">
   <button class="back-btn" onclick="goToPage('home')">← Home</button>
-  <div class="proj-banner pb-hyd">
-    <span class="proj-banner-emoji">🌿</span>
-    <div class="proj-banner-content">
-      <div class="proj-label">VENTURE 01</div>
+  <div class="proj-hd">
+    <div class="proj-icon">🌿</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 01</div>
       <div class="proj-name">Hydroponics</div>
       <div class="proj-sub">Soil-free fresh produce for resorts &amp; local markets</div>
     </div>
@@ -354,7 +343,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
   <div class="proj-kpis">
     <div class="pkpi"><div class="pkpi-n">$120K</div><div class="pkpi-l">Year 3 Revenue</div></div>
     <div class="pkpi"><div class="pkpi-n">Month 1</div><div class="pkpi-l">First Revenue</div></div>
-    <div class="pkpi"><div class="pkpi-n">50%+</div><div class="pkpi-l">Price over imports</div></div>
+    <div class="pkpi"><div class="pkpi-n">50%+</div><div class="pkpi-l">Premium over imports</div></div>
   </div>
   <p class="proj-desc">Transfer and scale the existing hydroponic operation to Shoulder Island. Serve resort salad bars, hotel kitchens, and local supermarkets with premium fresh produce year-round. Starting revenue achievable within the first month of operation.</p>
 
@@ -409,10 +398,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 <!-- ═══ VENTURE 2: SEA CUCUMBER ═══ -->
 <div id="v2" class="page">
   <button class="back-btn" onclick="goToPage('home')">← Home</button>
-  <div class="proj-banner pb-sea">
-    <span class="proj-banner-emoji">🐟</span>
-    <div class="proj-banner-content">
-      <div class="proj-label">VENTURE 02</div>
+  <div class="proj-hd">
+    <div class="proj-icon">🐟</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 02</div>
       <div class="proj-name">Sea Cucumber</div>
       <div class="proj-sub">Premium H. scabra aquaculture for Asian export</div>
     </div>
@@ -473,10 +462,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 <!-- ═══ VENTURE 3: POULTRY ═══ -->
 <div id="v3" class="page">
   <button class="back-btn" onclick="goToPage('home')">← Home</button>
-  <div class="proj-banner pb-plt">
-    <span class="proj-banner-emoji">🐔</span>
-    <div class="proj-banner-content">
-      <div class="proj-label">VENTURE 03</div>
+  <div class="proj-hd">
+    <div class="proj-icon">🐔</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 03</div>
       <div class="proj-name">Poultry Farm</div>
       <div class="proj-sub">Broiler meat + layer eggs for local &amp; resort markets</div>
     </div>
@@ -538,10 +527,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 <!-- ═══ VENTURE 4: COCONUT ═══ -->
 <div id="v4" class="page">
   <button class="back-btn" onclick="goToPage('home')">← Home</button>
-  <div class="proj-banner pb-cnt">
-    <span class="proj-banner-emoji">🥥</span>
-    <div class="proj-banner-content">
-      <div class="proj-label">VENTURE 04</div>
+  <div class="proj-hd">
+    <div class="proj-icon">🥥</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 04</div>
       <div class="proj-name">Coconut + VCO</div>
       <div class="proj-sub">Near-zero raw material cost — palms already on island</div>
     </div>
@@ -582,10 +571,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 <!-- ═══ VENTURE 5: SEAWEED ═══ -->
 <div id="v5" class="page">
   <button class="back-btn" onclick="goToPage('home')">← Home</button>
-  <div class="proj-banner pb-swd">
-    <span class="proj-banner-emoji">🌊</span>
-    <div class="proj-banner-content">
-      <div class="proj-label">VENTURE 05</div>
+  <div class="proj-hd">
+    <div class="proj-icon">🌊</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 05</div>
       <div class="proj-name">Seaweed + IMTA</div>
       <div class="proj-sub">Kappaphycus aquaculture + lagoon polyculture system</div>
     </div>
@@ -630,10 +619,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 <!-- ═══ VENTURE 6: ECO TOURISM ═══ -->
 <div id="v6" class="page">
   <button class="back-btn" onclick="goToPage('home')">← Home</button>
-  <div class="proj-banner pb-tour">
-    <span class="proj-banner-emoji">🤿</span>
-    <div class="proj-banner-content">
-      <div class="proj-label">VENTURE 06</div>
+  <div class="proj-hd">
+    <div class="proj-icon">🤿</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 06</div>
       <div class="proj-name">Eco Tourism</div>
       <div class="proj-sub">Resort partnership day trips — no overnight infra required</div>
     </div>
@@ -676,10 +665,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 <!-- ═══ VENTURE 7: SOLAR + CIRCULAR ═══ -->
 <div id="v7" class="page">
   <button class="back-btn" onclick="goToPage('home')">← Home</button>
-  <div class="proj-banner pb-sol">
-    <span class="proj-banner-emoji">☀️</span>
-    <div class="proj-banner-content">
-      <div class="proj-label">VENTURE 07</div>
+  <div class="proj-hd">
+    <div class="proj-icon">☀️</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 07</div>
       <div class="proj-name">Solar + Circular</div>
       <div class="proj-sub">Zero-waste infrastructure layer for the whole island</div>
     </div>
@@ -715,10 +704,10 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 <!-- ═══ TEAM IDEAS ═══ -->
 <div id="ideas" class="page">
   <div class="pg-title">Team Discussion</div>
-  <p style="font-size:12px;color:var(--muted);margin-bottom:18px;line-height:1.6">Share ideas, questions, and improvements. Vote on your favourites before we finalise the proposals.</p>
+  <p style="font-size:11px;color:var(--muted);margin-bottom:18px;line-height:1.65;margin-top:6px">Share ideas, questions, and improvements. Vote on your favourites before we finalise the proposals.</p>
   <div class="idea-form">
-    <h3 style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:10px">💬 Add Your Idea</h3>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Got a new venture idea, an improvement, or a question about the numbers? Post it here for the team.</p>
+    <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text2)">Add Your Idea</h3>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px">Got a new venture idea, an improvement, or a question about the numbers? Post it here for the team.</p>
     <textarea class="iinput" id="ideaText" rows="3" placeholder="e.g. What about grouper fish cages in the lagoon? High export value to China..."></textarea>
     <div class="cats" id="catSelect">
       <button class="cbt sel" onclick="selCat(this,'💡 New Idea')">💡 New Idea</button>
@@ -730,7 +719,7 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
     <input class="iinput" id="authorName" placeholder="Your name" style="height:42px;resize:none;margin-bottom:10px">
     <button class="sbtn" onclick="submitIdea()">Post to Team Board →</button>
   </div>
-  <div class="sh">Team Board</div>
+  <div style="display:flex;align-items:center;gap:8px;margin:20px 0 10px"><span style="width:16px;height:1px;background:var(--gold);opacity:.4;flex-shrink:0;display:block"></span><span style="font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Team Board</span></div>
   <div id="ideasList"><div class="empty"><div class="ei">💬</div><div>No ideas yet — be the first to share with the team!</div></div></div>
 </div>
 
@@ -738,17 +727,17 @@ h1.hero-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-
 if(window.Telegram&&window.Telegram.WebApp){window.Telegram.WebApp.ready();window.Telegram.WebApp.expand()}
 function showPage(id,btn){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.si').forEach(b=>b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
   window.scrollTo(0,0);
 }
 function goToPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.si').forEach(b=>b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  const nb=document.querySelector('.nb[data-page="'+id+'"]');
-  if(nb)nb.classList.add('active');
+  const si=document.querySelector('.si[data-page="'+id+'"]');
+  if(si)si.classList.add('active');
   window.scrollTo(0,0);
 }
 function toggleProp(header){

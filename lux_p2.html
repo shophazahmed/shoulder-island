@@ -1,0 +1,262 @@
+<!-- ═══ VENTURE 1: HYDROPONICS ═══ -->
+<div id="v1" class="page">
+  <button class="back-btn" onclick="goToPage('home')">← Home</button>
+  <div class="proj-hero">
+    <img class="proj-hero-img" data-img-key="v1" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800" alt="Hydroponics" onload="this.classList.add('loaded')">
+    <div class="proj-hero-overlay"></div>
+    <label class="img-edit-ui"><span style="display:block;font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">📷 Image URL (Google Drive share link or direct)</span><input class="img-url-input" placeholder="Paste link and press Enter…" onchange="updateImg('v1',this.value)"></label>
+  </div>
+  <div class="proj-hd">
+    <div class="proj-icon">🌿</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 01</div>
+      <div class="proj-name">Hydroponics</div>
+      <div class="proj-sub">Soil-free fresh produce for resorts &amp; local markets</div>
+    </div>
+  </div>
+  <div class="proj-kpis">
+    <div class="pkpi"><div class="pkpi-n" data-key="v1-kpi1" onclick="makeEditable(this)">MVR 1.85M</div><div class="pkpi-l">Year 3 Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n">Month 1</div><div class="pkpi-l">First Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n">50%+</div><div class="pkpi-l">Premium over imports</div></div>
+  </div>
+  <p class="proj-desc">Transfer and scale the existing hydroponic operation to Shoulder Island. Serve resort salad bars, hotel kitchens, and local supermarkets with premium fresh produce year-round. Starting revenue achievable within the first month of operation.</p>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01</span> Cover Page</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-01">
+    <div class="cover-card"><span class="island-emoji">🌿</span><h2>Hydroponics Farm</h2><p>Shoulder Island — Integrated Venture Plan</p><hr class="cover-divider"><div class="cover-meta"><div class="cm-item"><span>Project</span><span>Commercial Hydroponics — Greens, Herbs &amp; Vegetables</span></div><div class="cm-item"><span>Location</span><span>Shoulder Island, Maldives (TBD Atoll)</span></div><div class="cm-item"><span>Phase 1 Scale</span><span>500 m² growing area (polytunnel)</span></div><div class="cm-item"><span>Target Markets</span><span>Resorts, Hotels, Local Islands</span></div><div class="cm-item"><span>Year 1 Revenue</span><span>MVR 616,000</span></div><div class="cm-item"><span>Year 3 Revenue</span><span>MVR 1,848,000+</span></div></div></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">02</span> Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-02">
+    <div class="prop-section"><p>The Maldives currently imports the vast majority of its fresh vegetables and herbs, creating chronic supply instability and high prices for resort kitchens and local households. This venture transfers and scales an already-operating hydroponic system to Shoulder Island, producing pesticide-free leafy greens, herbs, tomatoes, and cucumbers for direct sale to nearby resorts, hotel restaurants, and inhabited island markets.</p><p style="margin-top:8px">Starting revenue is achievable within the first month of operation. Fresh local produce commands a 30–50% price premium over imported equivalents. The operation integrates with the poultry farm (waste greens as free feed), composting system (nutrient runoff), and eco-tourism programme (farm tour stop), making it a key node in the island's circular economy.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">03</span> Background &amp; Market Opportunity</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-03">
+    <div class="prop-section"><h4>Maldives Food Import Dependency</h4><p>The private sector in the Maldives has increased investment in commercial food production using hydroponic cultivation systems, yet only two inhabited islands currently operate larger-scale agricultural hydroponics projects — Maafahi and Thoddoo. The enormous gap between local supply and resort demand remains largely unfilled.</p></div>
+    <div class="prop-section"><h4>Government Policy Push</h4><p>Since November 2023, President Dr. Muizzu has launched multiple initiatives to boost local agriculture productivity, including a pilot vertical hydroponics programme at Hanimaadhoo Agriculture Centre, Haa Dhaalu Atoll. The government actively supports local agricultural investment through training, equipment grants, and market access programmes.</p></div>
+    <div class="prop-section"><h4>Resort Demand</h4><p>Resorts including Soneva Fushi and Kuramathi already run small-scale hydroponics for their kitchens — a clear signal that the hospitality sector wants locally grown produce. A scaled commercial operation would capture this unmet demand at premium prices.</p></div>
+    <div class="prop-section"><h4>Global Market Context</h4><p>The global hydroponics market was valued at USD 12.7 billion in 2024 and is projected to reach USD 43.8 billion by 2035, growing at a CAGR of 12.1%. The island and small-nation segment is the fastest-growing, driven by food security imperatives and premium quality differentiation.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">04</span> Project Operations</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-04">
+    <div class="prop-section"><h4>Phase 1 Crops (Month 1–6)</h4><ul><li>Leafy greens: lettuce, spinach, kale, pak choi — 45-day cycles</li><li>Herbs: basil, mint, coriander, chives — continuous harvest</li><li>Cherry tomatoes — 90-day cycles</li><li>Cucumbers — 60-day cycles</li></ul></div>
+    <div class="prop-section"><h4>Phase 2 Expansion (Year 2)</h4><ul><li>Add mushroom cultivation block (Oyster, Shiitake) — high resort demand, Soneva model</li><li>Expand to 1,500 m² total growing area</li><li>Add microgreens and edible flowers for resort premium garnish market</li><li>Introduce strawberries for high-value export</li></ul></div>
+    <div class="prop-section"><h4>System Design</h4><ul><li>Dutch-bucket and NFT (Nutrient Film Technique) systems inside UV-stabilised polytunnels</li><li>Climate-control: shade netting, mist cooling, cross-ventilation for Maldivian heat</li><li>LED supplemental lighting for off-season production consistency</li><li>Rainwater harvesting + RO (Reverse Osmosis) unit for clean irrigation water</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">05</span> Implementation Plan</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-05">
+    <div class="prop-section"><ul><li><strong>Month 1–2:</strong> Transfer existing equipment and seedling stock from other island. Set up polytunnels and irrigation system</li><li><strong>Month 2–3:</strong> First planting cycle — leafy greens and herbs. Hire 1 farm technician + 1 assistant</li><li><strong>Month 3:</strong> First harvest and delivery to resort pilot partners. Establish weekly supply schedule</li><li><strong>Month 4–6:</strong> Add tomatoes and cucumbers. Sign formal supply agreements with 3+ resorts</li><li><strong>Year 2:</strong> Expand to 1,500 m², add mushroom block, hire logistics staff for inter-island delivery</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">06</span> Financial Projections</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-06">
+    <table class="ptable"><tr><th>Item</th><th>Cost (MVR)</th></tr><tr><td>Polytunnel structure (500 m²)</td><td>184,800</td></tr><tr><td>Hydroponic systems (NFT + Dutch bucket)</td><td>123,200</td></tr><tr><td>LED lighting + climate control</td><td>61,600</td></tr><tr><td>RO water system</td><td>46,200</td></tr><tr><td>Seeds, nutrients, consumables (Yr 1)</td><td>77,000</td></tr><tr><td>Labour (2 staff, 12 months)</td><td>221,760</td></tr><tr><td>Contingency (10%)</td><td>71,456</td></tr><tr><td>TOTAL Phase 1</td><td>786,016</td></tr></table>
+    <table class="ptable" style="margin-top:10px"><tr><th>Revenue Stream</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th></tr><tr><td>Resort supply (greens/herbs)</td><td class="g">MVR 431K</td><td class="g">MVR 847K</td><td class="g">MVR 1.23M</td></tr><tr><td>Local island markets</td><td class="g">MVR 123K</td><td class="g">MVR 231K</td><td class="g">MVR 385K</td></tr><tr><td>Mushrooms (Yr 2+)</td><td class="g">—</td><td class="g">MVR 123K</td><td class="g">MVR 231K</td></tr><tr><td>TOTAL</td><td class="g">MVR 616K</td><td class="g">MVR 1.23M</td><td class="g">MVR 1.85M</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">07</span> Community &amp; Environmental Impact</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-07">
+    <div class="prop-section"><ul><li>Creates 2–4 direct local jobs (farm technician, harvest assistant, delivery driver)</li><li>Reduces food import spending for local islands — direct food security benefit</li><li>Zero pesticide growing protects surrounding reef and lagoon water quality</li><li>80–90% less water than soil-based farming — critical in water-scarce Maldivian context</li><li>Waste nutrient water feeds seaweed/fish tanks — zero effluent discharge</li><li>Unsold produce composted or fed to poultry — zero food waste</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">08</span> Regulatory Framework</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-08">
+    <div class="prop-section"><ul><li>Ministry of Fisheries, Marine Resources &amp; Agriculture — agricultural operating licence</li><li>Maldives Food &amp; Drug Authority (MFDA) — fresh produce registration and food safety compliance</li><li>Environmental Protection Agency (EPA) — EIA clearance prior to construction</li><li>Island Council — local development approval for polytunnel structures</li><li>Ministry of Economic Development — business registration, import permits for seeds and nutrients</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">09</span> Risk Assessment</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-09">
+    <table class="ptable"><tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr><tr><td>Pest/disease outbreak</td><td class="risk-med">Med</td><td>Enclosed polytunnel; strict biosecurity; IPM protocol</td></tr><tr><td>Weather/cyclone damage</td><td class="risk-med">Med</td><td>Storm-rated structure; insurance; backup stock</td></tr><tr><td>Market price fluctuation</td><td class="risk-low">Low</td><td>Long-term resort supply contracts at fixed price</td></tr><tr><td>Water supply failure</td><td class="risk-med">Med</td><td>Dual source: rainwater harvesting + RO backup</td></tr><tr><td>Power outage</td><td class="risk-low">Low</td><td>Solar + battery backup powers entire system</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">10</span> Conclusion &amp; Contact</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v1-prop-10">
+    <div class="prop-section"><p>The hydroponics operation is the fastest and lowest-risk revenue generator in the Shoulder Island portfolio. With existing equipment and operational experience already in hand, this venture can be operational within weeks of island lease approval. It anchors the island's circular economy — feeding the poultry, fertilising the soil, and showcasing sustainable farming to eco-tourism guests.</p></div>
+    <div class="note-teal">📧 Contact: [ Your Name ] · [ your@email.mv ] · [ +960 XXX XXXX ]</div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+  <button class="add-sec-btn" onclick="addSection('v1')">+ Add New Section</button>
+</div>
+
+<!-- ═══ VENTURE 2: SEA CUCUMBER ═══ -->
+<div id="v2" class="page">
+  <button class="back-btn" onclick="goToPage('home')">← Home</button>
+  <div class="proj-hero">
+    <img class="proj-hero-img" data-img-key="v2" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" alt="Sea Cucumber" onload="this.classList.add('loaded')">
+    <div class="proj-hero-overlay"></div>
+    <label class="img-edit-ui"><span style="display:block;font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">📷 Image URL (Google Drive share link or direct)</span><input class="img-url-input" placeholder="Paste link and press Enter…" onchange="updateImg('v2',this.value)"></label>
+  </div>
+  <div class="proj-hd">
+    <div class="proj-icon">🐟</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 02</div>
+      <div class="proj-name">Sea Cucumber</div>
+      <div class="proj-sub">Premium H. scabra aquaculture for Asian export</div>
+    </div>
+  </div>
+  <div class="proj-kpis">
+    <div class="pkpi"><div class="pkpi-n" data-key="v2-kpi1" onclick="makeEditable(this)">MVR 129.4M</div><div class="pkpi-l">Full Scale Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n" data-key="v2-kpi2" onclick="makeEditable(this)">MVR 2,156/kg</div><div class="pkpi-l">Avg Export Price (dried)</div></div>
+    <div class="pkpi"><div class="pkpi-n">7.5 MT</div><div class="pkpi-l">Annual Target Yr 2</div></div>
+  </div>
+  <p class="proj-desc">Hatchery-based production of Holothuria scabra (sandfish) in Shoulder Island's lagoon. World's most commercially valuable sea cucumber species, prized as one of China's "Four Heavenly Foods." Sea cucumbers feed naturally — zero feed cost — while cleaning the lagoon floor.</p>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01</span> Cover Page</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-01">
+    <div class="cover-card"><span class="island-emoji">🐟</span><h2>Sea of Gold</h2><p>Sea Cucumber Aquaculture Farm — Shoulder Island</p><hr class="cover-divider"><div class="cover-meta"><div class="cm-item"><span>Species</span><span>Holothuria scabra (Sandfish)</span></div><div class="cm-item"><span>System</span><span>Hatchery + Lagoon Grow-Out</span></div><div class="cm-item"><span>Duration</span><span>24 months (2 phases)</span></div><div class="cm-item"><span>Yr 2 Output</span><span>7–7.5 MT dried sea cucumber</span></div><div class="cm-item"><span>Market</span><span>China, SE Asia, Japan</span></div><div class="cm-item"><span>Full Scale Revenue</span><span>MVR 129,360,000+</span></div></div></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">02</span> Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-02">
+    <div class="prop-section"><p>Sea cucumbers have been successfully farmed in the Maldives since 1996. Holothuria scabra commands MVR 2,156/kg dried on export markets and is considered a premium "Four Heavenly Foods" delicacy in China. The Maldives exports approximately 6 tons annually worth MVR 184.8M — but wild harvests are declining globally due to overfishing, creating a growing gap that aquaculture can fill.</p><p style="margin-top:8px">Shoulder Island's lagoon provides ideal conditions: clean water, natural H. scabra populations for broodstock, and ample grow-out space. The project targets 7–7.5 MT dried annual output by Year 2, generating MVR 16.2M revenue growing to MVR 129.4M+ at full commercial scale.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">03</span> Background &amp; Market Opportunity</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-03">
+    <div class="prop-section"><h4>Global Demand</h4><p>Sea cucumber prices have continuously risen over 40 years with no reversal in sight. China's growing middle class consumes sea cucumber as one of its most prized luxury foods during Chinese New Year, weddings, and celebrations. The Maldivian product commands premium pricing due to the country's pristine, pollution-free marine environment.</p></div>
+    <div class="prop-section"><h4>Maldives Competitive Advantage</h4><ul><li>Holothuria scabra has been successfully farmed here since 1996 — proven model exists</li><li>BluBridge Inc. tested a scalable, repeatable aquaculture business across multiple Maldivian locations (2013–2021)</li><li>Maldives' clean ocean environment produces premium-quality product vs. farmed competitors</li><li>Approximately 6 tons exported annually worth MVR 184.8M — massive room to scale</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">04</span> Project Operations</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-04">
+    <div class="prop-section"><h4>Hatchery Phase</h4><ul><li>Collect wild H. scabra broodstock from approved Maldivian sites</li><li>Land-based hatchery with controlled spawning tanks and larval rearing systems</li><li>Consistent production of high-quality juveniles using established Maldivian hatchery techniques</li><li>Juveniles transferred to lagoon grow-out pens at 2–3 cm size</li></ul></div>
+    <div class="prop-section"><h4>Lagoon Grow-Out</h4><ul><li>Secured mesh pens in sheltered lagoon zones</li><li>Community contract grower model: local families manage pens and are paid per kg at harvest</li><li>Growth to 350–425g over 12–18 months in natural lagoon conditions</li><li>Sea cucumbers feed naturally on sand/detritus — zero feed cost — while cleaning the lagoon floor</li></ul></div>
+    <div class="prop-section"><h4>Processing</h4><ul><li>On-site evisceration, boiling, smoking, and drying to produce beche-de-mer</li><li>Cold storage and export-grade packaging</li><li>Direct export to verified Chinese and SE Asian buyers</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">05</span> Implementation Plan</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-05">
+    <div class="prop-section"><ul><li><strong>Months 1–6:</strong> Hatchery construction, broodstock collection, first spawning cycle</li><li><strong>Months 6–12:</strong> Transfer juveniles (2–3 cm) to lagoon grow-out pens; community grower recruitment and training</li><li><strong>Months 13–20:</strong> Juveniles reach harvest size (350–425g); first commercial processing run</li><li><strong>Months 18–24:</strong> Scale up to second hatchery cycle; expand lagoon pens; establish export contracts</li><li><strong>Year 3+:</strong> Full production at 7–7.5 MT/year; explore additional atoll grow-out sites</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">06</span> Financial Projections</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-06">
+    <table class="ptable"><tr><th>Capital Item</th><th>Ph 1 (MVR)</th><th>Ph 2 (MVR)</th></tr><tr><td>Hatchery setup</td><td>1,232,000</td><td>308,000</td></tr><tr><td>Broodstock collection</td><td>154,000</td><td>77,000</td></tr><tr><td>Lagoon infrastructure</td><td>616,000</td><td>462,000</td></tr><tr><td>Staff &amp; operations</td><td>462,000</td><td>462,000</td></tr><tr><td>Processing &amp; packaging</td><td>308,000</td><td>308,000</td></tr><tr><td>Permits &amp; compliance</td><td>154,000</td><td>77,000</td></tr><tr><td>Contingency (10%)</td><td>293,000</td><td>170,000</td></tr><tr><td>TOTAL</td><td>3,219,000</td><td>1,864,000</td></tr></table>
+    <table class="ptable" style="margin-top:10px"><tr><th>Metric</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3+</th></tr><tr><td>Dried output (MT)</td><td>3.5</td><td>7.5</td><td>12+</td></tr><tr><td>Price/kg</td><td class="g">MVR 2,156</td><td class="g">MVR 2,156</td><td class="g">MVR 2,156</td></tr><tr><td>Gross Revenue</td><td class="g">MVR 7.55M</td><td class="g">MVR 16.2M</td><td class="g">MVR 129.4M+</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">07</span> Community &amp; Environmental Impact</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-07">
+    <div class="prop-section"><ul><li>Sea cucumbers actively clean the lagoon — feeding on organic detritus and improving water quality for all other aquaculture and marine life</li><li>Hatchery-raised juveniles reduce pressure on wild stocks, protecting natural ecosystems</li><li>Community contract grower model creates income for local families with minimal capital requirement</li><li>No chemical inputs required — entirely natural feeding process</li><li>Broodstock replacement policy: farmed juveniles returned to wild at 100:1 ratio</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">08</span> Regulatory Framework</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-08">
+    <div class="prop-section"><ul><li>Ministry of Fisheries, Marine Resources &amp; Agriculture — aquaculture licence, species collection permit</li><li>Maldives Marine Research Institute (MMRI) — monitoring cooperation, data sharing</li><li>Environmental Protection Agency (EPA) — EIA clearance</li><li>Ministry of Transport &amp; Civil Aviation — inter-island vessel permits for transport</li><li>Maldives Customs Service — beche-de-mer export documentation</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">09</span> Risk Assessment</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-09">
+    <table class="ptable"><tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr><tr><td>Juvenile mortality</td><td class="risk-med">Med</td><td>Staggered hatchery batches; strict biosecurity</td></tr><tr><td>Cyclone/storm damage</td><td class="risk-med">Med</td><td>Sheltered lagoon site selection; insurance</td></tr><tr><td>Export price drop</td><td class="risk-low">Low</td><td>Long-term buyer contracts; premium sustainable branding</td></tr><tr><td>Broodstock scarcity</td><td class="risk-low">Low</td><td>Multiple collection sites; captive broodstock programme</td></tr><tr><td>Regulatory delays</td><td class="risk-low">Low</td><td>Early engagement with MMRI and Ministry of Fisheries</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">10</span> Conclusion &amp; Contact</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v2-prop-10">
+    <div class="prop-section"><p>The sea cucumber farm is the single highest-revenue venture in this portfolio. The Maldives has a proven 30-year history of H. scabra aquaculture, the lagoon environment is ideal, and global demand continues to grow. With the right hatchery setup and community grow-out model, this venture can generate over MVR 129.4M annually at full commercial scale.</p></div>
+    <div class="note-teal">📧 Contact: [ Your Name ] · [ your@email.mv ] · [ +960 XXX XXXX ]</div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+  <button class="add-sec-btn" onclick="addSection('v2')">+ Add New Section</button>
+</div>
+
+<!-- ═══ VENTURE 3: POULTRY ═══ -->
+<div id="v3" class="page">
+  <button class="back-btn" onclick="goToPage('home')">← Home</button>
+  <div class="proj-hero">
+    <img class="proj-hero-img" data-img-key="v3" src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800" alt="Poultry" onload="this.classList.add('loaded')">
+    <div class="proj-hero-overlay"></div>
+    <label class="img-edit-ui"><span style="display:block;font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">📷 Image URL (Google Drive share link or direct)</span><input class="img-url-input" placeholder="Paste link and press Enter…" onchange="updateImg('v3',this.value)"></label>
+  </div>
+  <div class="proj-hd">
+    <div class="proj-icon">🐔</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 03</div>
+      <div class="proj-name">Poultry Farm</div>
+      <div class="proj-sub">Broiler meat + layer eggs for local &amp; resort markets</div>
+    </div>
+  </div>
+  <div class="proj-kpis">
+    <div class="pkpi"><div class="pkpi-n" data-key="v3-kpi1" onclick="makeEditable(this)">MVR 16.3M</div><div class="pkpi-l">Year 3 Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n">10,000</div><div class="pkpi-l">Broilers Year 2</div></div>
+    <div class="pkpi"><div class="pkpi-n">5,000</div><div class="pkpi-l">Layer Hens Year 2</div></div>
+  </div>
+  <p class="proj-desc">Commercial-scale chicken meat and egg production to replace Maldives' near-total reliance on poultry imports. Proven demand — Addu City's BTEK farm exceeded all forecasts from Day 1. Government actively inviting investors with flexible BOT and PPP incentives.</p>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01</span> Cover Page</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-01">
+    <div class="cover-card"><span class="island-emoji">🐔</span><h2>Fresh &amp; Local Poultry Farm</h2><p>Broiler + Layer Operation — Shoulder Island, Maldives</p><hr class="cover-divider"><div class="cover-meta"><div class="cm-item"><span>Phase 1</span><span>2,000 broilers + 1,000 layers</span></div><div class="cm-item"><span>Phase 2 (Yr 2)</span><span>10,000 broilers + 5,000 layers</span></div><div class="cm-item"><span>Markets</span><span>Local islands, resorts, hotels</span></div><div class="cm-item"><span>First Revenue</span><span>Month 7 (broiler); Month 5 (eggs)</span></div><div class="cm-item"><span>Yr 2 Net Profit</span><span>MVR 3,819,200</span></div><div class="cm-item"><span>Yr 3 Net Profit</span><span>MVR 7,469,000+</span></div></div></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">02</span> Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-02">
+    <div class="prop-section"><p>The Maldives is almost entirely dependent on imported poultry products and animal feed — a structural vulnerability that drives up consumer prices, drains foreign exchange, and exposes the country to global supply chain disruptions. The Ministry of Agriculture and Animal Welfare has identified this as a priority sector and is actively inviting investors with flexible BOT, PPP, and land-lease incentives.</p><p style="margin-top:8px">This farm will produce fresh broiler meat and eggs for local islands, resort kitchens, and hotels. Phase 1 targets 2,000 broilers and 1,000 layers, scaling to 10,000 broilers and 5,000 layers by Year 2, generating net profit of MVR 3.82M in Year 2 growing to MVR 7.47M+ by Year 3.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">03</span> Background &amp; Market Opportunity</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-03">
+    <div class="prop-section"><h4>Import Dependency</h4><p>The Maldives is a reliable and growing market for India's poultry exports, importing nearly all of its chicken meat and eggs. This structural dependence leaves local consumers vulnerable to global price shocks and supply disruptions, while funnelling significant foreign exchange out of the country.</p></div>
+    <div class="prop-section"><h4>Proven Local Demand</h4><p>BTEK Poultry Farm, launched in Addu City in 2022 as the Maldives' first industrial-scale poultry operation, reported that demand exceeded their initial forecasts from the very first day of production — confirming there is a strong, ready market for locally produced poultry at competitive prices.</p></div>
+    <div class="prop-section"><h4>Tourism Market Premium</h4><p>With over 2 million tourist arrivals annually, resort kitchens and hotel restaurants represent a high-value B2B market. These buyers currently pay premium import prices due to cold-chain logistics from overseas. A local farm offering guaranteed fresh, traceable supply would capture this market while undercutting import costs.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">04</span> Project Operations</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-04">
+    <div class="prop-section"><h4>Broiler (Meat) Production</h4><ul><li>Breed: Cobb 500 or Ross 308 — fast-growing, heat-tolerant tropical breeds</li><li>6–7 week grow-out cycle; 6 cycles per year per shed</li><li>Phase 1: 2,000 birds/cycle → ~12,000 birds annually. Phase 2: 10,000/cycle → 60,000 annually</li><li>Average dressed yield: 1.6 kg per bird; on-site slaughter, cold storage, and packaging</li></ul></div>
+    <div class="prop-section"><h4>Layer (Egg) Production</h4><ul><li>Breed: Lohmann Brown or Hy-Line Brown — 300–320 eggs/hen/year</li><li>Phase 1: 1,000 hens → 300,000 eggs/year. Phase 2: 5,000 hens → 1.5M eggs/year</li><li>Egg grading, washing, and tray packaging for retail</li></ul></div>
+    <div class="prop-section"><h4>Facility</h4><ul><li>Climate-adapted open-sided tunnel-ventilated sheds with shade netting and misters</li><li>Solar + battery power; rainwater harvesting; cold room (4°C)</li><li>Manure collection for composting — by-product sold to resorts</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">05</span> Implementation Plan</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-05">
+    <div class="prop-section"><ul><li><strong>Months 1–3:</strong> Secure permits; construct sheds, cold room, feed storage</li><li><strong>Month 3–4:</strong> Import Day-Old Chicks (DOCs) and point-of-lay pullets from India/Sri Lanka</li><li><strong>Month 5:</strong> First egg collection from layers</li><li><strong>Month 7–8:</strong> First broiler harvest and market delivery</li><li><strong>Months 9–18:</strong> Scale to Phase 2; expand layer flock; launch resort supply contracts; brand packaging</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">06</span> Financial Projections</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-06">
+    <table class="ptable"><tr><th>Cost Item</th><th>Ph 1 (MVR)</th><th>Ph 2 (MVR)</th></tr><tr><td>Sheds + construction</td><td>1,001,000</td><td>1,463,000</td></tr><tr><td>Feed storage + mixer</td><td>231,000</td><td>308,000</td></tr><tr><td>DOCs + pullets</td><td>154,000</td><td>231,000</td></tr><tr><td>Cold room + processing</td><td>308,000</td><td>462,000</td></tr><tr><td>Solar, water, utilities</td><td>184,800</td><td>154,000</td></tr><tr><td>Staff (12 months)</td><td>369,600</td><td>554,400</td></tr><tr><td>Permits + insurance</td><td>92,400</td><td>61,600</td></tr><tr><td>Contingency</td><td>269,500</td><td>346,500</td></tr><tr><td>TOTAL</td><td>2,965,100</td><td>3,812,100</td></tr></table>
+    <table class="ptable" style="margin-top:10px"><tr><th>Revenue</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th></tr><tr><td>Broiler meat</td><td class="g">MVR 1.85M</td><td class="g">MVR 5.54M</td><td class="g">MVR 9.24M</td></tr><tr><td>Egg sales</td><td class="g">MVR 924K</td><td class="g">MVR 2.77M</td><td class="g">MVR 4.62M</td></tr><tr><td>Resort B2B premium</td><td class="g">MVR 308K</td><td class="g">MVR 1.23M</td><td class="g">MVR 2.31M</td></tr><tr><td>Compost by-product</td><td class="g">MVR 30.8K</td><td class="g">MVR 123K</td><td class="g">MVR 231K</td></tr><tr><td>TOTAL GROSS</td><td class="g">MVR 3.11M</td><td class="g">MVR 9.67M</td><td class="g">MVR 16.3M</td></tr><tr><td>Net Profit</td><td class="g">MVR 800K</td><td class="g">MVR 3.82M</td><td class="g">MVR 7.47M</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">07</span> Community &amp; Environmental Impact</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-07">
+    <div class="prop-section"><ul><li>6–12 direct local jobs — farm manager, vet technician, attendants, processing staff</li><li>Indirect employment: feed vendors, transport contractors, packaging suppliers</li><li>Directly reduces Maldives' poultry import dependency — food security benefit</li><li>Affordable fresh eggs and chicken for local island communities</li><li>Solar power reduces diesel reliance; manure composted — zero waste</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">08</span> Regulatory Framework</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-08">
+    <div class="prop-section"><ul><li>Ministry of Agriculture and Animal Welfare — farming licence, land lease (BOT/PPP model)</li><li>Environmental Protection Agency (EPA) — EIA clearance</li><li>Maldives Food and Drug Authority (MFDA) — food safety and product registration</li><li>Ministry of Economic Development — business registration, DOC and feed import permits</li><li>Ministry of Finance — import duty exemption application</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">09</span> Risk Assessment</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-09">
+    <table class="ptable"><tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr><tr><td>Disease outbreak (HPAI)</td><td class="risk-high">High</td><td>Strict biosecurity; vaccinations; veterinary retainer; quarantine</td></tr><tr><td>Feed supply disruption</td><td class="risk-med">Med</td><td>On-site feed mixer; 3-month stockpile; dual suppliers</td></tr><tr><td>Cyclone/climate damage</td><td class="risk-med">Med</td><td>Climate-adapted sheds; insurance; contingency fund</td></tr><tr><td>Power/water failure</td><td class="risk-med">Med</td><td>Solar backup; rainwater harvest; diesel generator standby</td></tr><tr><td>Market price drop</td><td class="risk-low">Low</td><td>Long-term resort supply agreements at fixed price</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">10</span> Conclusion &amp; Contact</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v3-prop-10">
+    <div class="prop-section"><p>Poultry farming is not merely a business opportunity in the Maldives — it is a national priority. The country's near-total import reliance, proven demand confirmed by Addu City's BTEK farm, and the government's active incentive programme make this one of the most commercially compelling and lowest-barrier ventures in this portfolio. Net profit grows from MVR 800K in Year 1 to over MVR 7.47M by Year 3.</p></div>
+    <div class="note-teal">📧 Contact: [ Your Name ] · [ your@email.mv ] · [ +960 XXX XXXX ]</div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+  <button class="add-sec-btn" onclick="addSection('v3')">+ Add New Section</button>
+</div>
+
+<!-- ═══ VENTURE 4: COCONUT ═══ -->
+<div id="v4" class="page">
+  <button class="back-btn" onclick="goToPage('home')">← Home</button>
+  <div class="proj-hero">
+    <img class="proj-hero-img" data-img-key="v4" src="https://images.unsplash.com/photo-1580984969071-a8da5656c2fb?w=800" alt="Coconut" onload="this.classList.add('loaded')">
+    <div class="proj-hero-overlay"></div>
+    <label class="img-edit-ui"><span style="display:block;font-size:9px;color:rgba(255,255,255,.5);margin-bottom:4px">📷 Image URL (Google Drive share link or direct)</span><input class="img-url-input" placeholder="Paste link and press Enter…" onchange="updateImg('v4',this.value)"></label>
+  </div>
+  <div class="proj-hd">
+    <div class="proj-icon">🥥</div>
+    <div class="proj-info">
+      <div class="proj-label">Venture 04</div>
+      <div class="proj-name">Coconut + VCO</div>
+      <div class="proj-sub">Near-zero raw material cost — palms already on island</div>
+    </div>
+  </div>
+  <div class="proj-kpis">
+    <div class="pkpi"><div class="pkpi-n" data-key="v4-kpi1" onclick="makeEditable(this)">MVR 1.23M+</div><div class="pkpi-l">Year 3 Revenue</div></div>
+    <div class="pkpi"><div class="pkpi-n" data-key="v4-kpi2" onclick="makeEditable(this)">MVR 77K/MT</div><div class="pkpi-l">VCO Export Price</div></div>
+    <div class="pkpi"><div class="pkpi-n">~MVR 0</div><div class="pkpi-l">Raw Material Cost</div></div>
+  </div>
+  <p class="proj-desc">Harvest existing coconut palms for Virgin Coconut Oil (VCO) export, coir fibre, copra, and coconut water. Historically one of the Maldives' top traditional exports with almost zero capital cost for raw material. 100% utilisation — water, meat, husk, shell all have markets.</p>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">01–02</span> Cover &amp; Executive Summary</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v4-prop-01">
+    <div class="cover-card"><span class="island-emoji">🥥</span><h2>Coconut Value Chain</h2><p>VCO · Coir Fibre · Copra · Biochar — Shoulder Island</p></div>
+    <div class="prop-section" style="margin-top:12px"><p>Coconut palms are native to Maldivian islands and are almost certainly already growing on Shoulder Island. This venture requires minimal capital investment — the raw material is free. Processing coconuts into VCO, coir fibre, and copra turns a free island resource into a multi-stream export product. Coconut is historically one of the Maldives' top exports and local operators are already proving the circular model — using coconut husks and manure from chickens to create rich compost, exactly as this venture proposes.</p></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">03</span> Background &amp; Market Opportunity</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v4-prop-03">
+    <div class="prop-section"><h4>Product Markets</h4><ul><li><strong>Virgin Coconut Oil (VCO):</strong> MVR 46,200–77,000/MT — high demand from cosmetics, health food, and food processing industries. Premium pricing for certified organic, cold-pressed Maldivian VCO</li><li><strong>Coir Rope &amp; Fibre:</strong> MVR 2,310–4,620/MT — used in horticulture, construction, and erosion control. Also used as hydroponic grow medium (coco peat)</li><li><strong>Coconut Water:</strong> Premium fresh coconut water commands MVR 77–185/coconut at resort level</li><li><strong>Copra:</strong> Dried coconut meat processed into coconut oil — local market and export</li><li><strong>Biochar from shells:</strong> Soil amendment sold to resort gardens — MVR 3,080–6,160/ton</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">04–05</span> Operations &amp; Implementation</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v4-prop-04">
+    <div class="prop-section"><ul><li>Survey existing coconut palm population on island; map harvestable trees</li><li>Establish harvest schedule: mature coconuts every 45–60 days per tree</li><li>Small cold-press VCO processing unit: husk dehusking, meat extraction, cold pressing, bottling</li><li>Coir processing: husk retting, fibre extraction, drying, baling</li><li>Shell carbonisation kiln for biochar production</li><li>Coconut water: harvest young green coconuts; sell fresh to resorts; package excess</li><li>Plant additional palms in cleared areas over Year 1–2 to increase yield by Year 5</li></ul></div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">06</span> Financial Projections</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v4-prop-06">
+    <table class="ptable"><tr><th>Capital Item</th><th>Cost (MVR)</th></tr><tr><td>Cold-press VCO unit + bottling</td><td>123,200</td></tr><tr><td>Coir processing equipment</td><td>61,600</td></tr><tr><td>Shell kiln (biochar)</td><td>30,800</td></tr><tr><td>Labour (1 worker, 12 months)</td><td>110,880</td></tr><tr><td>Packaging + certification</td><td>46,200</td></tr><tr><td>TOTAL</td><td>372,680</td></tr></table>
+    <table class="ptable" style="margin-top:10px"><tr><th>Product</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th></tr><tr><td>VCO export</td><td class="g">MVR 123K</td><td class="g">MVR 308K</td><td class="g">MVR 616K</td></tr><tr><td>Coconut water (resorts)</td><td class="g">MVR 61.6K</td><td class="g">MVR 154K</td><td class="g">MVR 308K</td></tr><tr><td>Coir fibre/rope</td><td class="g">MVR 30.8K</td><td class="g">MVR 92.4K</td><td class="g">MVR 185K</td></tr><tr><td>Biochar + copra</td><td class="g">MVR 15.4K</td><td class="g">MVR 61.6K</td><td class="g">MVR 123K</td></tr><tr><td>TOTAL</td><td class="g">MVR 231K</td><td class="g">MVR 616K</td><td class="g">MVR 1.23M</td></tr></table>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+
+  <div class="proposal-wrap"><div class="prop-header" onclick="toggleProp(this)"><div class="prop-htitle"><span class="prop-num">07–10</span> Impact, Regulation, Risk &amp; Conclusion</div><span class="prop-arrow">▼</span></div><div class="prop-body" data-prop-key="v4-prop-07">
+    <div class="prop-section"><h4>Community &amp; Environmental Impact</h4><ul><li>Creates 1–2 local jobs with minimal training requirement</li><li>Revives a traditional Maldivian export product — cultural preservation</li><li>100% utilisation of coconut — zero waste (water, meat, husk, shell all have markets)</li><li>Biochar improves island soil quality for in-ground farming (bananas, breadfruit, herbs)</li></ul></div>
+    <div class="prop-section"><h4>Regulatory</h4><ul><li>Ministry of Economic Development — export registration for VCO and coir</li><li>Maldives Customs Service — export documentation</li><li>Optional: organic certification (USDA or EU) for premium VCO pricing (MVR 77K–123K/MT)</li></ul></div>
+    <div class="prop-section"><h4>Risk</h4><ul><li>Low — raw material is free and naturally replenishing</li><li>Coconut palms are highly resilient to cyclones compared to other crops</li><li>Multiple product lines spread market risk across several buyer segments</li></ul></div>
+    <div class="note-teal">📧 Contact: [ Your Name ] · [ your@email.mv ] · [ +960 XXX XXXX ]</div>
+  </div><div class="section-controls"><button class="del-sec-btn" onclick="delSection(this)">🗑️ Delete Section</button></div></div>
+  <button class="add-sec-btn" onclick="addSection('v4')">+ Add New Section</button>
+</div>
